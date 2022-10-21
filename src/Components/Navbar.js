@@ -12,7 +12,7 @@ const Navbar = () => {
 
       <nav className='px-4 md:px-8 lg:px-24  w-full z-[99]   bg-white  2xl:max-w-[1600px] '>
         <div className='flex items-center justify-between h-full w-full '>
-          <Link to='/' className='text-header font-semibold text-[32px] flex items-center'>Combo Trader</Link>
+          <Link to='/' className='text-header font-semibold text-[32px] flex items-center'>KITOVU</Link>
 
           {/* mobile */}
           {/* <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">

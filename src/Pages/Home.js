@@ -205,7 +205,7 @@ const Home = (props) => {
 
                 <button className='text-[#F58A07] flex  items-center  gap-2 mt-5' onClick={()=> {
                   console.log('jam')
-                  navigate('/yield-max')}}><h1>learn more</h1> <BsArrowRight className='text-[#F58A07]'  /> </button>
+                  navigate('/yield-max')}}><h1>Learn more</h1> <BsArrowRight className='text-[#F58A07]'  /> </button>
 
               </div>
 
