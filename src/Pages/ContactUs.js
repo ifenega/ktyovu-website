@@ -3,7 +3,7 @@ import Footer from '../Components/Footer'
 import Navbar from '../Components/Navbar'
 import { ErrorMessage, Field, Form, Formik } from 'formik'
 import * as Yup from "yup";
-import MapContainer from './MapContainer'
+
 import { collection, addDoc } from "firebase/firestore";
 import { toast } from 'react-toastify';
 import LoadingSpinner from '../Components/LoadingSpinner';
