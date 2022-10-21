@@ -46,10 +46,10 @@ const Home = (props) => {
   }
 
   useEffect(() => {
-    // const interval = setInterval(() => { carouselInfiniteScroll() }, 5000)
+    const interval = setInterval(() => { carouselInfiniteScroll() }, 5000)
 
-    // console.log(step)
-    // return () => clearInterval(interval)
+
+    return () => clearInterval(interval)
   })
 
   return (
@@ -203,7 +203,9 @@ const Home = (props) => {
                 <h1 className='text-header max-w-[560px] font-semibold text-2xl md:text-3xl lg:text-5xl mt-2'>Go digital and increase your yield by taking advantage of our data-based  platform.</h1>
                 <p className='text-body pt-4 pb-5'>Receive insights regarding your farm’s health, beneficial tips, and many more personalised agronomic advisory.</p>
 
-                <button className='text-[#F58A07] flex  items-center  gap-2 mt-5' onClick={()=> {navigate('/yield-max')}}><h1>learn more</h1> <BsArrowRight className='text-[#F58A07]'  /> </button>
+                <button className='text-[#F58A07] flex  items-center  gap-2 mt-5' onClick={()=> {
+                  console.log('jam')
+                  navigate('/yield-max')}}><h1>learn more</h1> <BsArrowRight className='text-[#F58A07]'  /> </button>
 
               </div>
 
