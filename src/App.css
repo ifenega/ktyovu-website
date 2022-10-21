@@ -36,3 +36,93 @@
     transform: rotate(360deg);
   }
 }
+/* 
+.signup-number .PhoneInputCountry {
+  display: none;
+} */
+
+.PhoneInputCountryIcon{
+  width:  calc(1em * 1.5);
+  
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+/* .PhoneInputCountrySelect, .PhoneInputCountry{
+    border: 1px solid #e5e7eb !important
+  } */
+
+input[type=tel]{
+    border: 1px solid #e5e7eb !important;
+    background-color: transparent;
+    border-radius: 5px;
+    width: 100%;
+    height: 3rem;
+    padding-left: 0.8em;
+}
+.PhoneInput{
+    background-color: transparent;
+    display: flex;
+    column-gap: 12px;
+    align-items: center;
+    
+}
+.PhoneInputCountry{
+    background-color: transparent !important;
+    border: 1px solid #e5e7eb !important;
+    border-radius: 5px;
+    position: relative;
+    align-self: stretch;
+    display: flex;
+    align-items: center;
+    padding: 0 0.5em;
+
+}
+.PhoneInputCountrySelect {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    border: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+.PhoneInputCountryIcon{
+    width:  calc(1em * 1.5);
+    
+}
+.PhoneInputCountrySelectArrow{
+    display: block;
+    content: '';
+    border-style: solid;
+    width: 0.5em;
+    height: 0.5em;
+    margin-left: 0.7em;
+    z-index: 1;
+    border: 1px solid black;
+    border-bottom-width:1px ;
+    border-top-width:0px ;
+    border-left-width:0px ;
+
+    transform: rotate(45deg)
+}
+
+select {
+  height: 47px;
+  background-image: url('./assets/dropdown-arrow.svg');
+  background-repeat: no-repeat, repeat;
+  background-position: right 1rem center;
+  border-radius: .25rem;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background-size: 15px 15px;
+  background-color: #fff;
+  outline: none;
+  padding-right: 200px
+
+}
