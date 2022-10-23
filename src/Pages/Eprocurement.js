@@ -49,7 +49,7 @@ const Eprocurement = (props) => {
                             <div className='flex items-center md:items-start justify-center md:justify-start'>
                                 <button className='max-w-[182px] w-[182px] bg-[#F58A071A] px-6 py-2.5 bg-[#F58A07] text-white hover:bg-white hover:text-[#F58A07]  rounded-3xl font-medium md:font-semibold' onClick={() => {
                                     navigate('/e-procurement/form')
-                                }}>Work With Us</button>
+                                }}>purchase your commodities</button>
                             </div>
 
 
@@ -74,6 +74,11 @@ const Eprocurement = (props) => {
                 <img src={vacancy} className='w-full h-full' />
                 <div className='w-full py-14 md:py-auto flex flex-col gap-5 items-center md:items-start px-4 md:px-8 lg:px-24  '>
                     <h1 className='text-2xl md:text-3xl lg:text-4xl text-left'>Sourcing and delivery of agricultural  products made easy with data-driven technology.</h1>
+                    <div className='flex items-center md:items-start justify-center md:justify-start'>
+                                <button className='max-w-[182px] w-[182px] px-6 py-2.5 bg-white text-[#F58A07] hover:bg-[#F58A07] hover:text-white border border-white  rounded-3xl font-medium md:font-semibold' onClick={() => {
+                                    navigate('/e-procurement/form')
+                                }}>purchase your commodities</button>
+                            </div>
 
 
                 </div>
@@ -88,8 +93,6 @@ const Eprocurement = (props) => {
                     <section className='grid md:grid-rows-2 items-center relative justify-center  mb-8 lg:mb-24'>
 
                         <h3 className=' text-[#F58A07] text-center'>WHY CHOOSE US?</h3>
-                        <h1 className='text-2xl md:text-3xl lg:text-4xl'>The benefits that will<br />
-                            make you comfort</h1>
                     </section>
 
 
@@ -103,7 +106,7 @@ const Eprocurement = (props) => {
 
                         <div className='w-full pl-4 md:pl-0 pr-4 md:pr-0 '>
 
-                            <h1 className='text-black max-w-[560px] font-semibold text-2xl md:text-3xl  mt-2'>Sourcing and Aggregation </h1>
+                            <h1 className='text-black max-w-[560px] font-semibold text-2xl md:text-3xl  mt-2'>Commodities at best prices</h1>
                             <p className='text-body pt-4 pb-5'>Get the best agricultural products. Our data-first approach interprets your desired product specifications and helps you purchase your quantity of choice from the best farms around Nigeria.  We save you time and stress.</p>
 
 
@@ -125,7 +128,7 @@ const Eprocurement = (props) => {
 
                         <div className='w-full pl-4 md:pl-0 pr-4 md:pr-0 '>
 
-                            <h1 className='text-black max-w-[560px] font-semibold text-2xl md:text-3xl  mt-2'>Logistics as a service.</h1>
+                            <h1 className='text-black max-w-[560px] font-semibold text-2xl md:text-3xl  mt-2'>Timely Delivery</h1>
                             <p className='text-body pt-4 pb-5'>We use technology to determine the best vehicle for transporting your agricultural products and we ensure it is delivered to you wherever and whenever you choose. It’s our way to ensure smarter, faster, and more reliable delivery of your farm produce.</p>
 
 

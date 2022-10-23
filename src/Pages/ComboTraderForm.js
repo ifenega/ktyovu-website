@@ -59,8 +59,8 @@ const ComboTraderForm = (props) => {
                         <div className='flex flex-col gap-6 w-full  pt-4 '>
 
                             <div>
-                                <h1 className='text-header max-w-[560px] font-semibold text-2xl md:text-3xl lg:text-5xl mt-2'>Sign up to Combo Trader</h1>
-                                <p className='text-body pt-4 pb-5'>Fill up the Form  and ou team will get back to within 24 hrs</p>
+                                <h1 className='text-header max-w-[560px] font-semibold text-2xl md:text-3xl lg:text-5xl mt-2'>Sign up with Combo Trader</h1>
+                                <p className='text-body pt-4 pb-5'>Fill up the Formand our team would revert within 24hours to set you on the path to profitable commodity trading.</p>
                             </div>
 
                             <div>
