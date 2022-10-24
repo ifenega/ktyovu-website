@@ -64,7 +64,7 @@ const Footer = (props) => {
 
                         <div className='pb-4 mr-8'>
                             <h1 className='font-semibold text-2xl '>Kitovu Technology Company</h1>
-                            <p >Kitovu Business Hub, Iseyin-Saki Expressway, <br />Sawmill Area, Iseyin</p>
+                            <p >Kitovu Business Hub, Iseyin-Saki Expressway, <br />Sawmill Area, Iseyin, Nigeria</p>
 
                         </div>
                         <div className='flex gap-1.5'>
@@ -102,7 +102,7 @@ const Footer = (props) => {
                     <div>
                         <div className='flex flex-col gap-3 text-white'>
                             <h1 className='font-medium pb-2'>Contact</h1>
-                            <a href="tel:+4733378901">+(123) 456-7890</a>
+                            {/* <a href="tel:+4733378901">+(123) 456-7890</a> */}
                             <a href="mailto:info@kitovu.com.ng">info@kitovu.com.ng</a>
                         </div>
                     </div>
@@ -201,7 +201,7 @@ const Footer = (props) => {
                                 <div><IoIosArrowDown className={`${contact && ' rotate-180 '} transition-all ease-in-out delay-200`} /></div>
                             </div>
                             <div className={`${contact ? 'flex ' : 'hidden '} flex-col mt-3 gap-3`}>
-                                <a href="tel:+4733378901">+47 333 78 901</a>
+                            
                                 <a href="mailto:info@kitovu.com.ng">info@kitovu.com.ng</a>
                             </div>
                         </div>
@@ -244,7 +244,7 @@ const Footer = (props) => {
                 </div>
 
                 <div className=' flex flex-col sm:flex-row gap-1.5  justify-between py-5 pt-8 text-sm ' >
-                    <p>© All rights reserved – Finsweet</p>
+                    <p>© All rights reserved – Kitovu business hub</p>
 
                     <div className='flex gap-3 text-sm'>
                         <p>Privacy Policy</p>

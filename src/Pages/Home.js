@@ -40,7 +40,7 @@ const Home = (props) => {
   const [step, setStep] = useState(1)
 
   const carouselInfiniteScroll = () => {
-    if (step !== 3) {
+    if (step !== 4) {
       setStep(step => step + 1)
     } else {
       setStep(1)
@@ -151,7 +151,7 @@ const Home = (props) => {
               </div>
 
               <div className='row-start-1 md:col-start-2 mr-0 md:mr-8 lg:mr-24  relative'>
-                <img src={imag1Adlib} className='absolute hidden md:flex left-[-57px] -top-[58px] z-[10px]' />
+                {/* <img src={imag1Adlib} className='absolute hidden md:flex left-[-57px] -top-[58px] z-[10px]' /> */}
                 <img src={farm2} className='w-full md:rounded-[20px] overflow-hidden' />
 
               </div>
@@ -186,7 +186,7 @@ const Home = (props) => {
                 <h1 className='text-header max-w-[560px] font-semibold text-2xl md:text-3xl lg:text-5xl mt-2'>Avoid losses and cut costs on the storage of your agricultural products.</h1>
                 <p className='text-body pt-4 pb-5'>Take advantage of our high-tech storage facilities nationwide to extend the shelf life of your product and convert them to collateral assets to get loans to expand your farming business.</p>
 
-                <button className='text-[#F58A07] flex  items-center  gap-2 mt-5'><h1>Learn more</h1> <BsArrowRight className='text-[#F58A07]' /> </button>
+                <a className='text-[#F58A07] flex  items-center  gap-2 mt-5' href='https://www.storagex.com.ng/'><h1>Learn more</h1> <BsArrowRight className='text-[#F58A07]' /> </a>
 
               </div>
 
@@ -553,6 +553,8 @@ const Home = (props) => {
                   <IoMdArrowDropleftCircle className='text-gray-300 hover:text-[#F58A07] w-8 h-8' onClick={() => {
                     if (step !== 1) {
                       setStep(step - 1)
+                    } else {
+                      step(4)
                     }
                   }} />
                 </div>
@@ -789,8 +791,10 @@ const Home = (props) => {
                 <div>
                   <IoMdArrowDroprightCircle className='text-gray-300 hover:text-[#F58A07] w-8 h-8' onClick={() => {
 
-                    if (step !== 3) {
+                    if (step !== 4) {
                       setStep(step + 1)
+                    } else {
+                      step(1)
                     }
                   }} />
                 </div>

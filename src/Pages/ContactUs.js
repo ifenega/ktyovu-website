@@ -113,11 +113,11 @@ const ContactUs = (props) => {
                         <div className='flex justify-between flex-col md:flex-row gap-4 md:gap-8 mb-8 md:mb-16'>
                             <div className='w-full'>
                                 <h3 className='text-xl text-[#0D1317] mb-1 md:mb-4'>Location</h3>
-                                <p className='text-body text-sm md:text-base'>DLF Cybercity, Bhubaneswar,<br /> India, &52050</p>
+                                <p className='text-body text-sm md:text-base'>Kitovu Business Hub, Iseyin-Saki Expressway, <br />Sawmill Area, Iseyin, Nigeria</p>
                             </div>
                             <div className='w-full'>
                                 <h3 className='text-xl text-[#0D1317] mb-1 md:mb-4'>Contact Us</h3>
-                                <a href="tel:+4733378901" className='text-body text-sm md:text-base'>+47 333 78 901</a>
+                                {/* <a href="tel:+4733378901" className='text-body text-sm md:text-base'>+47 333 78 901</a> */}
                                 <br />
                                 <a href="mailto:info@kitovu.com.ng" className='text-body text-sm md:text-base'>info@kitovu.com.ng</a>
                             </div>
