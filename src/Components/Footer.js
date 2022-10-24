@@ -155,7 +155,7 @@ const Footer = (props) => {
                     <div>
 
                         <div className='pb-4 '>
-                            <h1 className='font-semibold text-2xl pb-4 '>Ketovu Technology Company</h1>
+                            <h1 className='font-semibold text-2xl pb-4 '>Kitovu Technology Company</h1>
                             <p >Kitovu Business Hub, Iseyin-Saki Expressway, <br />Sawmill Area, Iseyin</p>
 
                         </div>

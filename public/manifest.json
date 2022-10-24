@@ -1,6 +1,7 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Kitovu",
+  "name": "Kitovu",
+  "description": "Access Unlimited Opportunities for Your Farm.",
   "icons": [
     {
       "src": "favicon.ico",
