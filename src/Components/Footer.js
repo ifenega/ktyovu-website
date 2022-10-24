@@ -94,6 +94,7 @@ const Footer = (props) => {
                             <h1 className='font-medium pb-2'>Company</h1>
                             {/* <Link to='' >About Us </Link>
                             <Link to='' >Career</Link> */}
+                            <Link to='/contact_us' >Contact Us</Link>
                             <Link to='/' >Services</Link>
 
                         </div>
@@ -190,6 +191,7 @@ const Footer = (props) => {
                             <div className={`${company ? 'flex ' : 'hidden '} flex-col mt-3 gap-3`}>
                                 {/* <Link to='' >About Us </Link> */}
                                 {/* <Link to='' >Career</Link> */}
+                                <Link to='/contact_us' >Contact Us</Link>
                                 <Link to='/' >Services</Link>
                                 {/* <Link to='' className='' >Blog</Link> */}
                             </div>

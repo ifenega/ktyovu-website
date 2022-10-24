@@ -186,7 +186,7 @@ const Home = (props) => {
                 <h1 className='text-header max-w-[560px] font-semibold text-2xl md:text-3xl lg:text-5xl mt-2'>Avoid losses and cut costs on the storage of your agricultural products.</h1>
                 <p className='text-body pt-4 pb-5'>Take advantage of our high-tech storage facilities nationwide to extend the shelf life of your product and convert them to collateral assets to get loans to expand your farming business.</p>
 
-                <a className='text-[#F58A07] flex  items-center  gap-2 mt-5' href='https://www.storagex.com.ng/'><h1>Learn more</h1> <BsArrowRight className='text-[#F58A07]' /> </a>
+                <a className='text-[#F58A07] flex  items-center  gap-2 mt-5' href='https://www.storagex.com.ng/' target='_blank'><h1>Learn more</h1> <BsArrowRight className='text-[#F58A07]' /> </a>
 
               </div>
 
