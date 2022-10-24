@@ -14,6 +14,7 @@ import farm1 from '../assets/farm1.png'
 import farm2 from '../assets/farm2.png'
 import farm3 from '../assets/farm3.png'
 import farm4 from '../assets/farm4.png'
+import farm from '../assets/farm111.png'
 import farm5 from '../assets/farm5.png'
 import support1 from '../assets/support1.svg'
 import support2 from '../assets/support2.svg'
@@ -28,6 +29,7 @@ import find3 from '../assets/find3.png'
 import bg1 from '../assets/bg1.png'
 import { useNavigate } from 'react-router-dom'
 import { IoMdArrowDropleftCircle, IoMdArrowDroprightCircle } from 'react-icons/io'
+import ScrollToTop from '../Components/ScrollToTop'
 
 
 
@@ -55,23 +57,23 @@ const Home = (props) => {
   return (
     <div>
       <Navbar />
-
+      <ScrollToTop />
       <div className='mt-20'>
-      <img src={bg1} aria-label='farmer in a corn field' className='flex md:hidden' />
+        <img src={bg1} aria-label='farmer in a corn field' className='flex md:hidden' />
         <section className='px-4 md:px-8 lg:px-24  pt-4 md:pt-16 pb-6 bg-[#DCEAF5] flex justify-center '>
 
           <div className='flex gap-5 md:gap-10 flex-col md:flex-row items-end justify-center 2xl:max-w-[1600px]'>
-          
+
             <div className='w-full pb-4 md:pb-16 text-center md:text-left'>
               <h1 className='text-header max-w-[560px] font-semibold text-3xl md:text-[45px] lg:text-6xl'>Access Unlimited Opportunities for Your Farm.</h1>
               <p className='text-body max-w-[560px] mt-4 mb-8 text-base md:text-lg'>Kitovu’s mission is to help African Farmers escape poverty by building and deploying climate-smart farming and post-harvest infrastructure to enable them to maximize their yield.</p>
               <div className=' '>
-                <button className='w-full md:w-[182px] bg-[#F58A071A] px-6 py-2.5 bg-[#F58A07] text-white hover:bg-white hover:text-[#F58A07]  rounded-3xl font-medium md:font-semibold'>Our Services</button>
+                {/* <button className='w-full md:w-[182px] bg-[#F58A071A] px-6 py-2.5 bg-[#F58A07] text-white hover:bg-white hover:text-[#F58A07]  rounded-3xl font-medium md:font-semibold'>Our Services</button> */}
 
 
               </div>
 
-              <div className='flex flex-col gap-4 mt-6'>
+              {/* <div className='flex flex-col gap-4 mt-6'>
                 <h1 className='text-gray-500 font-light '>Featured By</h1>
                 <div className='flex flex-row flex-wrap gap-3 md:gap-6 justify-center md:justify-start items-center'>
                   <img src={icon1} alt="disrupt africa icon" />
@@ -79,7 +81,7 @@ const Home = (props) => {
                   <img src={icon3} alt="innovation village icon" />
                   <img src={icon4} alt="business day icon" />
                 </div>
-              </div>
+              </div> */}
 
 
             </div>
@@ -203,9 +205,10 @@ const Home = (props) => {
                 <h1 className='text-header max-w-[560px] font-semibold text-2xl md:text-3xl lg:text-5xl mt-2'>Go digital and increase your yield by taking advantage of our data-based  platform.</h1>
                 <p className='text-body pt-4 pb-5'>Receive insights regarding your farm’s health, beneficial tips, and many more personalised agronomic advisory.</p>
 
-                <button className='text-[#F58A07] flex  items-center  gap-2 mt-5' onClick={()=> {
+                <button className='text-[#F58A07] flex  items-center  gap-2 mt-5' onClick={() => {
                   console.log('jam')
-                  navigate('/yield-max')}}><h1>Learn more</h1> <BsArrowRight className='text-[#F58A07]'  /> </button>
+                  navigate('/yield-max')
+                }}><h1>Learn more</h1> <BsArrowRight className='text-[#F58A07]' /> </button>
 
               </div>
 
@@ -271,125 +274,260 @@ const Home = (props) => {
 
               <h1 className='text-header font-semibold text-2xl md:text-3xl  mt-2 mb-5'>Find out which product suit you best</h1>
 
-              <div className=' flex items-center gap-10 mb-6'>
-                <div className={`${step === 1 && " border-[10px] border-[#F58A07] rounded-[30px] "}`}>
+              <div className=' flex items-center gap-10 mb-10 '>
+                <div className={`${step === 1 && " border-[10px] border-[#F58A07] bg-[#F58A07] rounded-[30px]  cursor-pointer scale-110"}`} onClick={() => setStep(1)}>
                   <img src={find1} />
+                  <div className='text-center py-3'>
+                    <h1 className={`text-center ${step === 1 ? " text-gray-50  " : "text-gray-600 "} `} >Agribusinesses and Processors</h1>
+                  </div>
                 </div>
-                <div className={`${step === 2 && " border-[10px] border-[#F58A07] rounded-[30px] "}`}>
+                <div className={`${step === 2 && " border-[10px] border-[#F58A07] bg-[#F58A07] rounded-[30px]  cursor-pointer scale-110"}`} onClick={() => setStep(2)}>
                   <img src={find2} />
+                  <div className='text-center py-3'>
+                    <h1 className={`text-center ${step === 2 ? " text-gray-50  " : "text-gray-600 "} `} >Financial Institutions</h1>
+                    <h1 className='text-center text-white'></h1>
+                  </div>
                 </div>
-                <div className={`${step === 3 && " border-[10px] border-[#F58A07] rounded-[30px] "}`}>
+                <div className={`${step === 3 && " border-[10px] border-[#F58A07] bg-[#F58A07] rounded-[30px]  cursor-pointer scale-110"}`} onClick={() => setStep(3)}>
                   <img src={find3} />
+                  <div className='text-center py-3'>
+                    <h1 className={`text-center ${step === 3 ? " text-gray-50  " : "text-gray-600 "} `} >For Farmers</h1>
+                  </div>
                 </div>
+
+                <div className={`${step === 4 && " border-[10px] border-[#F58A07] bg-[#F58A07] rounded-[30px]  cursor-pointer scale-110"}`} onClick={() => setStep(4)}>
+                  <img src={farm} />
+                  <div className='text-center py-3'>
+                    <h1 className={`text-center ${step === 4 ? " text-gray-50  " : "text-gray-600 "} `} >Input Manufacturers</h1>
+                  </div>
+                </div>
+
               </div>
-              <div className='grid grid-cols-[auto_auto_auto] gap-4 items-center'>
+              <div className='grid grid-cols-[auto_auto_auto] gap-4 items-center mt-4'>
                 <div className='flex items-center justify-start'>
                   <IoMdArrowDropleftCircle className='text-gray-300 hover:text-[#F58A07] w-10 h-10' onClick={() => {
                     if (step !== 1) {
                       setStep(step - 1)
+                    } else {
+                      setStep(4)
                     }
                   }} />
                 </div>
                 <div className='w-full'>
                   {step === 1 && <div className=''>
-                    <div className='flex flex-col gap-4 '>
-                      <h2 class=" text-lg font-semibold text-gray-900 ">Are you a Processor</h2>
-                      <ul class="space-y-1  list-inside text-gray-800 ">
-                        <li class="flex items-center">
-                          <svg class="w-4 h-4 mr-1.5 text-[#F58A07] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                          <p className='w-full'> Manage and digitize multiple farmers, track farm level operations, track crop health.</p>
-                        </li>
-                        <li class="flex items-center">
-                          <svg class="w-4 h-4 mr-1.5 text-[#F58A07] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                          Carry out KYC documentations for farmers they support.
-                        </li>
-                        <li class="flex items-center">
-                          <svg class="w-4 h-4 mr-1.5 text-[#F58A07] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                          Get farmers to produce according to their desired specifications.
-                        </li>
-                        <li class="flex items-center">
-                          <svg class="w-4 h-4 mr-1.5 text-[#F58A07] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                          Manage farmer Outgrower Schemes, Clearly identify a grouped dataset of farmers they source from.
-                        </li>
-                        <li class="flex items-center">
-                          <svg class="w-4 h-4 mr-1.5 text-[#F58A07] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                          Buy quality farm produce.
-                        </li>
-                        <li class="flex items-center">
-                          <svg class="w-4 h-4 mr-1.5 text-[#F58A07] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                          Efficient storage facilities for your farmers.
-                        </li>
-                        <li class="flex items-center">
-                          <svg class="w-4 h-4 mr-1.5 text-[#F58A07] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                          Post Harvest and Storage Infrastructure on post paid basis.
-                        </li>
+                    <div className='flex flex-col gap-2 '>
 
+                      <ul className="space-y-1  list-inside text-gray-800 mb-2">
+
+                        <li className="flex flex-col gap-3 ">
+                          <div className='text-[#F58A07] text-sm leading-3 py-2 px-3.5 bg-white rounded-3xl w-fit border-[#F58A07] border relative '>YieldMax</div>
+
+                          <div className='flex'>
+                            <svg className="w-4 h-4 mr-1.5 text-[#F58A07] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                            <p className='w-full max-w-[900px]'> Manage and digitize multiple farmers, track farm level operations, track crop health. Carry out KYC documentations for farmers they support. Get farmers to produce according to their desired specifications. Manage farmer Outgrower Schemes, Clearly identify a grouped dataset of farmers they source from.</p>
+                          </div>
+
+
+                        </li>
                       </ul>
+
+                      <ul className="space-y-1  list-inside text-gray-800 mb-2">
+
+                        <li className="flex flex-col gap-3 ">
+                          <div className='text-[#F58A07] text-sm leading-3 py-2 px-3.5 bg-white rounded-3xl w-fit border-[#F58A07] border relative '>E-Procurement</div>
+
+                          <div className='flex'>
+                            <svg className="w-4 h-4 mr-1.5 text-[#F58A07] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                            <p className='w-full max-w-[900px]'>Sell  goods at good price to higher value markets and/or buy quality farm produce</p>
+                          </div>
+
+
+                        </li>
+                      </ul>
+                      <ul className="space-y-1  list-inside text-gray-800 mb-2">
+
+                        <li className="flex flex-col gap-3 ">
+                          <div className='text-[#F58A07] text-sm leading-3 py-2 px-3.5 bg-white rounded-3xl w-fit border-[#F58A07] border relative '>StorageX</div>
+
+                          <div className='flex'>
+                            <svg className="w-4 h-4 mr-1.5 text-[#F58A07] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                            <p className='w-full max-w-[900px]'>Efficient storage facilities for their farmers.</p>
+                          </div>
+
+
+                        </li>
+                      </ul>
+
+                      <ul className="space-y-1  list-inside text-gray-800 mb-2">
+
+                        <li className="flex flex-col gap-3 ">
+                          <div className='text-[#F58A07] text-sm leading-3 py-2 px-3.5 bg-white rounded-3xl w-fit border-[#F58A07] border relative '>ComboTrader</div>
+
+                          <div className='flex'>
+                            <svg className="w-4 h-4 mr-1.5 text-[#F58A07] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                            <p className='w-full max-w-[900px]'>Sell their goods at good price to higher value markets and/or buy quality farm produce.</p>
+                          </div>
+
+
+                        </li>
+                      </ul>
+
                     </div>
 
 
                   </div>}
 
-                  {step === 2 && <div className='flex flex-col gap-5'>
-                    <div className='flex flex-col gap-4 '>
-                      <h2 class=" text-lg font-semibold text-gray-900 ">For Financial Institutions </h2>
-                      <ul class="space-y-1  list-inside text-gray-800 ">
-                        <li class="flex items-center">
-                          <svg class="w-4 h-4 mr-1.5 text-[#F58A07] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                          Manage and digitize multiple farmers
-                        </li>
-                        <li class="flex items-center">
-                          <svg class="w-4 h-4 mr-1.5 text-[#F58A07] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                          Track farm level operations and  crop health.
-                        </li>
-                        <li class="flex items-center">
-                          <svg class="w-4 h-4 mr-1.5 text-[#F58A07] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                          Carry out KYC documentations for farmers they support.
-                        </li>
-                        <li class="flex items-center">
-                          <svg class="w-4 h-4 mr-1.5 text-[#F58A07] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                          Ensure that  farmers have capacity in terms of Good Agricuture Practice to produce before extending them financing.
-                        </li>
-                        <li class="flex items-center">
-                          <svg class="w-4 h-4 mr-1.5 text-[#F58A07] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                          Ensure that farmers are getting quality inputs to reduce likelihood of bad inputs related crop failure.
-                        </li>
-                        <li class="flex items-center">
-                          <svg class="w-4 h-4 mr-1.5 text-[#F58A07] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                          Access to low-risk investment, access to new clients.
+                  {step === 2 && <div className=''>
+                    {/* Financial Institutions */}
+                    <div className='flex flex-col gap-2 '>
 
-                        </li>
+                      <ul className="space-y-1  list-inside text-gray-800 mb-2">
+
+                        <li className="flex flex-col gap-3 ">
+                          <div className='text-[#F58A07] text-sm leading-3 py-2 px-3.5 bg-white rounded-3xl w-fit border-[#F58A07] border relative '>YieldMax</div>
+
+                          <div className='flex'>
+                            <svg className="w-4 h-4 mr-1.5 text-[#F58A07] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                            <p className='w-full max-w-[900px]'> Manage and digitize multiple farmers, track farm level operations, track crop health. Carry out KYC documentations for farmers they support. Get farmers to produce according to their desired specifications. Manage farmer Outgrower Schemes, Clearly identify a grouped dataset of farmers they source from.</p>
+                          </div>
 
 
+                        </li>
                       </ul>
+
+                      <ul className="space-y-1  list-inside text-gray-800 mb-2">
+
+                        <li className="flex flex-col gap-3 ">
+                          <div className='text-[#F58A07] text-sm leading-3 py-2 px-3.5 bg-white rounded-3xl w-fit border-[#F58A07] border relative '>StorageX</div>
+
+                          <div className='flex'>
+                            <svg className="w-4 h-4 mr-1.5 text-[#F58A07] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                            <p className='w-full max-w-[900px]'>Access to low-risk investment, access to new clients.</p>
+                          </div>
+
+
+                        </li>
+                      </ul>
+
+
                     </div>
 
 
                   </div>}
 
-                  {step === 3 && <div className='flex flex-col gap-5'>
-                    <div className='flex flex-col gap-4 '>
-                      <h2 class=" text-lg font-semibold text-gray-900 ">For Farmers </h2>
-                      <ul class="space-y-1  list-inside text-gray-800 ">
-                        <li class="flex items-center">
-                          <svg class="w-4 h-4 mr-1.5 text-[#F58A07] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                          Smallholder Farmers
-                        </li>
-                        <li class="flex items-center">
-                          <svg class="w-4 h-4 mr-1.5 text-[#F58A07] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                          Preserve their goods by storing it, access high value markets and finance to meet their short-term needs.
-                        </li>
-                        <li class="flex items-center">
-                          <svg class="w-4 h-4 mr-1.5 text-[#F58A07] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                          Sell their goods at good price to higher value markets.
-                        </li>
+                  {step === 3 && <div className=''>
+                    <div className='flex flex-col gap-2 '>
 
 
+                      <ul className="space-y-1  list-inside text-gray-800 mb-2">
+
+                        <li className="flex flex-col gap-3 ">
+                          <div className='text-[#F58A07] text-sm leading-3 py-2 px-3.5 bg-white rounded-3xl w-fit border-[#F58A07] border relative '>E-Procurement</div>
+
+                          <div className='flex'>
+                            <svg className="w-4 h-4 mr-1.5 text-[#F58A07] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                            <p className='w-full max-w-[900px]'>Sell their goods at good price to higher value markets.</p>
+                          </div>
+
+
+                        </li>
                       </ul>
+                      <ul className="space-y-1  list-inside text-gray-800 mb-2">
+
+                        <li className="flex flex-col gap-3 ">
+                          <div className='text-[#F58A07] text-sm leading-3 py-2 px-3.5 bg-white rounded-3xl w-fit border-[#F58A07] border relative '>StorageX</div>
+
+                          <div className='flex'>
+                            <svg className="w-4 h-4 mr-1.5 text-[#F58A07] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                            <p className='w-full max-w-[900px]'>Preserve their goods by storing it, access high value markets and finance to meet their short-term needs.</p>
+                          </div>
+
+
+                        </li>
+                      </ul>
+
+                      <ul className="space-y-1  list-inside text-gray-800 mb-2">
+
+                        <li className="flex flex-col gap-3 ">
+                          <div className='text-[#F58A07] text-sm leading-3 py-2 px-3.5 bg-white rounded-3xl w-fit border-[#F58A07] border relative '>ComboTrader</div>
+
+                          <div className='flex'>
+                            <svg className="w-4 h-4 mr-1.5 text-[#F58A07] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                            <p className='w-full max-w-[900px]'>Sell their goods at good price to higher value markets.</p>
+                          </div>
+
+
+                        </li>
+                      </ul>
+
                     </div>
 
 
                   </div>}
+
+                  {step === 4 && <div className=''>
+                    <div className='flex flex-col gap-2 '>
+
+
+                      <ul className="space-y-1  list-inside text-gray-800 mb-2">
+
+                        <li className="flex flex-col gap-3 ">
+                          <div className='text-[#F58A07] text-sm leading-3 py-2 px-3.5 bg-white rounded-3xl w-fit border-[#F58A07] border relative '>YieldMax</div>
+
+                          <div className='flex'>
+                            <svg className="w-4 h-4 mr-1.5 text-[#F58A07] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                            <p className='w-full max-w-[900px]'>To reach smallholder farmers with their produce directly with reduced logistics challenges. Disseminate information of Good Agriculture practice around their inputs and introduce new products.</p>
+                          </div>
+
+
+                        </li>
+                      </ul>
+                      <ul className="space-y-1  list-inside text-gray-800 mb-2">
+
+                        <li className="flex flex-col gap-3 ">
+                          <div className='text-[#F58A07] text-sm leading-3 py-2 px-3.5 bg-white rounded-3xl w-fit border-[#F58A07] border relative '>E-Procurement</div>
+
+                          <div className='flex'>
+                            <svg className="w-4 h-4 mr-1.5 text-[#F58A07] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                            <p className='w-full max-w-[900px]'>Sell their goods at good price to higher value markets.</p>
+                          </div>
+
+
+                        </li>
+                      </ul>
+                      <ul className="space-y-1  list-inside text-gray-800 mb-2">
+
+                        <li className="flex flex-col gap-3 ">
+                          <div className='text-[#F58A07] text-sm leading-3 py-2 px-3.5 bg-white rounded-3xl w-fit border-[#F58A07] border relative '>StorageX</div>
+
+                          <div className='flex'>
+                            <svg className="w-4 h-4 mr-1.5 text-[#F58A07] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                            <p className='w-full max-w-[900px]'>Access to low-risk investment, access to new clients.</p>
+                          </div>
+                        </li>
+                      </ul>
+
+
+                      <ul className="space-y-1  list-inside text-gray-800 mb-2">
+
+                        <li className="flex flex-col gap-3 ">
+                          <div className='text-[#F58A07] text-sm leading-3 py-2 px-3.5 bg-white rounded-3xl w-fit border-[#F58A07] border relative '>ComboTrader</div>
+
+                          <div className='flex'>
+                            <svg className="w-4 h-4 mr-1.5 text-[#F58A07] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                            <p className='w-full max-w-[900px]'>Sell their goods at good price to higher value markets.</p>
+                          </div>
+
+
+                        </li>
+                      </ul>
+
+                    </div>
+
+
+                  </div>}
+
+
 
 
 
@@ -397,8 +535,10 @@ const Home = (props) => {
                 <div className='flex items-center justify-end'>
                   <IoMdArrowDroprightCircle className='text-gray-300 hover:text-[#F58A07] w-10 h-10' onClick={() => {
 
-                    if (step !== 3) {
+                    if (step !== 4) {
                       setStep(step + 1)
+                    } else {
+                      setStep(1)
                     }
                   }} />
                 </div>
@@ -421,39 +561,63 @@ const Home = (props) => {
                     <div className='flex flex-col gap-4 '>
                       <img src={find1} />
 
-                      <div className='flex flex-col gap-4 '>
-                        <h2 class=" text-lg font-semibold text-gray-900 ">Are you a Processor</h2>
-                        <ul class="space-y-1  list-inside text-gray-800 ">
-                          <li class="flex items-center">
-                            <svg class="w-4 h-4 mr-1.5 text-[#F58A07] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                            <p className='w-full'> Manage and digitize multiple farmers, track farm level operations, track crop health.</p>
-                          </li>
-                          <li class="flex items-center">
-                            <svg class="w-4 h-4 mr-1.5 text-[#F58A07] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                            Carry out KYC documentations for farmers they support.
-                          </li>
-                          <li class="flex items-center">
-                            <svg class="w-4 h-4 mr-1.5 text-[#F58A07] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                            Get farmers to produce according to their desired specifications.
-                          </li>
-                          <li class="flex items-center">
-                            <svg class="w-4 h-4 mr-1.5 text-[#F58A07] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                            Manage farmer Outgrower Schemes, Clearly identify a grouped dataset of farmers they source from.
-                          </li>
-                          <li class="flex items-center">
-                            <svg class="w-4 h-4 mr-1.5 text-[#F58A07] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                            Buy quality farm produce.
-                          </li>
-                          <li class="flex items-center">
-                            <svg class="w-4 h-4 mr-1.5 text-[#F58A07] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                            Efficient storage facilities for your farmers.
-                          </li>
-                          <li class="flex items-center">
-                            <svg class="w-4 h-4 mr-1.5 text-[#F58A07] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                            Post Harvest and Storage Infrastructure on post paid basis.
-                          </li>
+                      <div className='flex flex-col gap-2 '>
+                        <h2 class=" text-lg font-semibold text-gray-900 ">Agribusinesses and processors</h2>
+                        <ul className="space-y-1  list-inside text-gray-800 mb-2">
 
+                          <li className="flex flex-col gap-3 ">
+                            <div className='text-[#F58A07] text-sm leading-3 py-2 px-3.5 bg-white rounded-3xl w-fit border-[#F58A07] border relative '>YieldMax</div>
+
+                            <div className='flex'>
+                              <svg className="w-4 h-4 mr-1.5 text-[#F58A07] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                              <p className='w-full max-w-[900px]'> Manage and digitize multiple farmers, track farm level operations, track crop health. Carry out KYC documentations for farmers they support. Get farmers to produce according to their desired specifications. Manage farmer Outgrower Schemes, Clearly identify a grouped dataset of farmers they source from.</p>
+                            </div>
+
+
+                          </li>
                         </ul>
+
+                        <ul className="space-y-1  list-inside text-gray-800 mb-2">
+
+                          <li className="flex flex-col gap-3 ">
+                            <div className='text-[#F58A07] text-sm leading-3 py-2 px-3.5 bg-white rounded-3xl w-fit border-[#F58A07] border relative '>E-Procurement</div>
+
+                            <div className='flex'>
+                              <svg className="w-4 h-4 mr-1.5 text-[#F58A07] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                              <p className='w-full max-w-[900px]'>Sell  goods at good price to higher value markets and/or buy quality farm produce</p>
+                            </div>
+
+
+                          </li>
+                        </ul>
+                        <ul className="space-y-1  list-inside text-gray-800 mb-2">
+
+                          <li className="flex flex-col gap-3 ">
+                            <div className='text-[#F58A07] text-sm leading-3 py-2 px-3.5 bg-white rounded-3xl w-fit border-[#F58A07] border relative '>StorageX</div>
+
+                            <div className='flex'>
+                              <svg className="w-4 h-4 mr-1.5 text-[#F58A07] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                              <p className='w-full max-w-[900px]'>Efficient storage facilities for their farmers.</p>
+                            </div>
+
+
+                          </li>
+                        </ul>
+
+                        <ul className="space-y-1  list-inside text-gray-800 mb-2">
+
+                          <li className="flex flex-col gap-3 ">
+                            <div className='text-[#F58A07] text-sm leading-3 py-2 px-3.5 bg-white rounded-3xl w-fit border-[#F58A07] border relative '>ComboTrader</div>
+
+                            <div className='flex'>
+                              <svg className="w-4 h-4 mr-1.5 text-[#F58A07] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                              <p className='w-full max-w-[900px]'>Sell their goods at good price to higher value markets and/or buy quality farm produce.</p>
+                            </div>
+
+
+                          </li>
+                        </ul>
+
                       </div>
                     </div>
 
@@ -464,65 +628,156 @@ const Home = (props) => {
                     <div className='flex flex-col gap-4 '>
                       <img src={find2} />
 
-                      <div className='flex flex-col gap-4 '>
-                        <h2 class=" text-lg font-semibold text-gray-900 ">For Financial Institutions </h2>
-                        <ul class="space-y-1  list-inside text-gray-800 ">
-                          <li class="flex items-center">
-                            <svg class="w-4 h-4 mr-1.5 text-[#F58A07] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                            Manage and digitize multiple farmers
-                          </li>
-                          <li class="flex items-center">
-                            <svg class="w-4 h-4 mr-1.5 text-[#F58A07] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                            Track farm level operations and  crop health.
-                          </li>
-                          <li class="flex items-center">
-                            <svg class="w-4 h-4 mr-1.5 text-[#F58A07] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                            Carry out KYC documentations for farmers they support.
-                          </li>
-                          <li class="flex items-center">
-                            <svg class="w-4 h-4 mr-1.5 text-[#F58A07] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                            Ensure that  farmers have capacity in terms of Good Agricuture Practice to produce before extending them financing.
-                          </li>
-                          <li class="flex items-center">
-                            <svg class="w-4 h-4 mr-1.5 text-[#F58A07] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                            Ensure that farmers are getting quality inputs to reduce likelihood of bad inputs related crop failure.
-                          </li>
-                          <li class="flex items-center">
-                            <svg class="w-4 h-4 mr-1.5 text-[#F58A07] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                            Access to low-risk investment, access to new clients.
+                      <div className='flex flex-col gap-2 '>
+                        <h2 class=" text-lg font-semibold text-gray-900 ">Financial Institutions</h2>
+                        <ul className="space-y-1  list-inside text-gray-800 mb-2">
 
-                          </li>
+                          <li className="flex flex-col gap-3 ">
+                            <div className='text-[#F58A07] text-sm leading-3 py-2 px-3.5 bg-white rounded-3xl w-fit border-[#F58A07] border relative '>YieldMax</div>
+
+                            <div className='flex'>
+                              <svg className="w-4 h-4 mr-1.5 text-[#F58A07] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                              <p className='w-full max-w-[900px]'> Manage and digitize multiple farmers, track farm level operations, track crop health. Carry out KYC documentations for farmers they support. Get farmers to produce according to their desired specifications. Manage farmer Outgrower Schemes, Clearly identify a grouped dataset of farmers they source from.</p>
+                            </div>
 
 
+                          </li>
                         </ul>
+
+                        <ul className="space-y-1  list-inside text-gray-800 mb-2">
+
+                          <li className="flex flex-col gap-3 ">
+                            <div className='text-[#F58A07] text-sm leading-3 py-2 px-3.5 bg-white rounded-3xl w-fit border-[#F58A07] border relative '>StorageX</div>
+
+                            <div className='flex'>
+                              <svg className="w-4 h-4 mr-1.5 text-[#F58A07] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                              <p className='w-full max-w-[900px]'>Access to low-risk investment, access to new clients.</p>
+                            </div>
+
+
+                          </li>
+                        </ul>
+
+
                       </div>
                     </div>
 
 
                   </div>}
 
+
                   {step === 3 && <div className='flex flex-col gap-5'>
                     <div className='flex flex-col gap-4 '>
                       <img src={find3} />
 
-                      <div className='flex flex-col gap-4 '>
-                        <h2 class=" text-lg font-semibold text-gray-900 ">For Farmers </h2>
-                        <ul class="space-y-1  list-inside text-gray-800 ">
-                          <li class="flex items-center">
-                            <svg class="w-4 h-4 mr-1.5 text-[#F58A07] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                            Smallholder Farmers
-                          </li>
-                          <li class="flex items-center">
-                            <svg class="w-4 h-4 mr-1.5 text-[#F58A07] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                            Preserve their goods by storing it, access high value markets and finance to meet their short-term needs.
-                          </li>
-                          <li class="flex items-center">
-                            <svg class="w-4 h-4 mr-1.5 text-[#F58A07] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                            Sell their goods at good price to higher value markets.
-                          </li>
+                      <div className='flex flex-col gap-2 '>
+                        <h2 class=" text-lg font-semibold text-gray-900 ">For Farmers</h2>
+
+                        <ul className="space-y-1  list-inside text-gray-800 mb-2">
+
+                          <li className="flex flex-col gap-3 ">
+                            <div className='text-[#F58A07] text-sm leading-3 py-2 px-3.5 bg-white rounded-3xl w-fit border-[#F58A07] border relative '>E-Procurement</div>
+
+                            <div className='flex'>
+                              <svg className="w-4 h-4 mr-1.5 text-[#F58A07] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                              <p className='w-full max-w-[900px]'>Sell their goods at good price to higher value markets.</p>
+                            </div>
 
 
+                          </li>
                         </ul>
+                        <ul className="space-y-1  list-inside text-gray-800 mb-2">
+
+                          <li className="flex flex-col gap-3 ">
+                            <div className='text-[#F58A07] text-sm leading-3 py-2 px-3.5 bg-white rounded-3xl w-fit border-[#F58A07] border relative '>StorageX</div>
+
+                            <div className='flex'>
+                              <svg className="w-4 h-4 mr-1.5 text-[#F58A07] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                              <p className='w-full max-w-[900px]'>Preserve their goods by storing it, access high value markets and finance to meet their short-term needs.</p>
+                            </div>
+
+
+                          </li>
+                        </ul>
+
+                        <ul className="space-y-1  list-inside text-gray-800 mb-2">
+
+                          <li className="flex flex-col gap-3 ">
+                            <div className='text-[#F58A07] text-sm leading-3 py-2 px-3.5 bg-white rounded-3xl w-fit border-[#F58A07] border relative '>ComboTrader</div>
+
+                            <div className='flex'>
+                              <svg className="w-4 h-4 mr-1.5 text-[#F58A07] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                              <p className='w-full max-w-[900px]'>Sell their goods at good price to higher value markets.</p>
+                            </div>
+
+
+                          </li>
+                        </ul>
+
+                      </div>
+                    </div>
+
+                  </div>}
+                  {step === 4 && <div className='flex flex-col gap-5'>
+                    <div className='flex flex-col gap-4 '>
+                      <img src={farm} />
+
+                      <div className='flex flex-col gap-2 '>
+
+                        <h2 class=" text-lg font-semibold text-gray-900 ">Input Manufacturers</h2>
+                        <ul className="space-y-1  list-inside text-gray-800 mb-2">
+
+                          <li className="flex flex-col gap-3 ">
+                            <div className='text-[#F58A07] text-sm leading-3 py-2 px-3.5 bg-white rounded-3xl w-fit border-[#F58A07] border relative '>YieldMax</div>
+
+                            <div className='flex'>
+                              <svg className="w-4 h-4 mr-1.5 text-[#F58A07] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                              <p className='w-full max-w-[900px]'>To reach smallholder farmers with their produce directly with reduced logistics challenges. Disseminate information of Good Agriculture practice around their inputs and introduce new products.</p>
+                            </div>
+
+
+                          </li>
+                        </ul>
+                        <ul className="space-y-1  list-inside text-gray-800 mb-2">
+
+                          <li className="flex flex-col gap-3 ">
+                            <div className='text-[#F58A07] text-sm leading-3 py-2 px-3.5 bg-white rounded-3xl w-fit border-[#F58A07] border relative '>E-Procurement</div>
+
+                            <div className='flex'>
+                              <svg className="w-4 h-4 mr-1.5 text-[#F58A07] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                              <p className='w-full max-w-[900px]'>Sell their goods at good price to higher value markets.</p>
+                            </div>
+
+
+                          </li>
+                        </ul>
+                        <ul className="space-y-1  list-inside text-gray-800 mb-2">
+
+                          <li className="flex flex-col gap-3 ">
+                            <div className='text-[#F58A07] text-sm leading-3 py-2 px-3.5 bg-white rounded-3xl w-fit border-[#F58A07] border relative '>StorageX</div>
+
+                            <div className='flex'>
+                              <svg className="w-4 h-4 mr-1.5 text-[#F58A07] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                              <p className='w-full max-w-[900px]'>Access to low-risk investment, access to new clients.</p>
+                            </div>
+                          </li>
+                        </ul>
+
+
+                        <ul className="space-y-1  list-inside text-gray-800 mb-2">
+
+                          <li className="flex flex-col gap-3 ">
+                            <div className='text-[#F58A07] text-sm leading-3 py-2 px-3.5 bg-white rounded-3xl w-fit border-[#F58A07] border relative '>ComboTrader</div>
+
+                            <div className='flex'>
+                              <svg className="w-4 h-4 mr-1.5 text-[#F58A07] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                              <p className='w-full max-w-[900px]'>Sell their goods at good price to higher value markets.</p>
+                            </div>
+
+
+                          </li>
+                        </ul>
+
                       </div>
                     </div>
 
@@ -574,11 +829,11 @@ const Home = (props) => {
 
 
 
-      </div>
+      </div >
       <Footer db={props.db} />
 
 
-    </div>
+    </div >
   )
 }
 

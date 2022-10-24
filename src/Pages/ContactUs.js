@@ -7,6 +7,7 @@ import * as Yup from "yup";
 import { collection, addDoc } from "firebase/firestore";
 import { toast } from 'react-toastify';
 import LoadingSpinner from '../Components/LoadingSpinner';
+import ScrollToTop from '../Components/ScrollToTop';
 
 
 const ContactUs = (props) => {
@@ -42,6 +43,7 @@ const ContactUs = (props) => {
 
     return (
         <div>
+            <ScrollToTop />
             <Navbar />
             <div className='px-4 md:px-8 lg:px-24  pt-4 md:pt-16 flex justify-center pb-4 '>
 

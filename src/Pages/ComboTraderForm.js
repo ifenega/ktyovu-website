@@ -9,6 +9,7 @@ import countries from "../assets/countries.json"
 import LoadingSpinner from '../Components/LoadingSpinner';
 import { addDoc, collection } from 'firebase/firestore';
 import { toast } from 'react-toastify';
+import ScrollToTop from '../Components/ScrollToTop';
 
 const ComboTraderForm = (props) => {
 
@@ -50,6 +51,7 @@ const ComboTraderForm = (props) => {
 
     return (
         <div>
+             <ScrollToTop />
             <Navbar />
             <div className='px-4 md:px-8 lg:px-24  pt-4 md:pt-16 flex justify-center pb-4 '>
                 <div className='flex gap-5 md:gap-5 flex-col  justify-center 2xl:max-w-[1600px]'>

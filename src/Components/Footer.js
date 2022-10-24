@@ -92,9 +92,9 @@ const Footer = (props) => {
                     <div>
                         <div className='flex flex-col gap-3 text-white'>
                             <h1 className='font-medium pb-2'>Company</h1>
-                            <Link to='' >About Us </Link>
-                            <Link to='' >Career</Link>
-                            <Link to='' >Services</Link>
+                            {/* <Link to='' >About Us </Link>
+                            <Link to='' >Career</Link> */}
+                            <Link to='/' >Services</Link>
 
                         </div>
                     </div>
@@ -188,10 +188,10 @@ const Footer = (props) => {
                                 <div><IoIosArrowDown className={`${company && ' rotate-180 '} transition-all ease-in-out delay-200`} /></div>
                             </div>
                             <div className={`${company ? 'flex ' : 'hidden '} flex-col mt-3 gap-3`}>
-                                <Link to='' >About Us </Link>
-                                <Link to='' >Career</Link>
-                                <Link to='' >Services</Link>
-                                <Link to='' className='' >Blog</Link>
+                                {/* <Link to='' >About Us </Link> */}
+                                {/* <Link to='' >Career</Link> */}
+                                <Link to='/' >Services</Link>
+                                {/* <Link to='' className='' >Blog</Link> */}
                             </div>
                         </div>
 

@@ -9,6 +9,7 @@ import farm12 from '../assets/farm12.png'
 import eprocurement1 from '../assets/eprocurement-image.png'
 import eprocurement2 from '../assets/eprom.png'
 import { useNavigate } from 'react-router-dom'
+import ScrollToTop from '../Components/ScrollToTop'
 
 const Eprocurement = (props) => {
 
@@ -34,6 +35,7 @@ const Eprocurement = (props) => {
 
     return (
         <div>
+            <ScrollToTop />
             <Navbar />
             <img src={eprocurement2} className='w-full md:rounded-[20px] overflow-hidden flex md:hidden' />
             <div className='px-4 md:px-8 lg:px-24  pt-4 md:pt-16 flex justify-center pb-4 '>
@@ -49,7 +51,7 @@ const Eprocurement = (props) => {
                             <div className='flex items-center md:items-start justify-center md:justify-start'>
                                 <button className='max-w-[182px] w-[182px] bg-[#F58A071A] px-6 py-2.5 bg-[#F58A07] text-white hover:bg-white hover:text-[#F58A07]  rounded-3xl font-medium md:font-semibold' onClick={() => {
                                     navigate('/e-procurement/form')
-                                }}>purchase your commodities</button>
+                                }}>purchase commodities</button>
                             </div>
 
 
@@ -77,7 +79,7 @@ const Eprocurement = (props) => {
                     <div className='flex items-center md:items-start justify-center md:justify-start'>
                                 <button className='max-w-[182px] w-[182px] px-6 py-2.5 bg-white text-[#F58A07] hover:bg-[#F58A07] hover:text-white border border-white  rounded-3xl font-medium md:font-semibold' onClick={() => {
                                     navigate('/e-procurement/form')
-                                }}>purchase your commodities</button>
+                                }}>Purchase commodities</button>
                             </div>
 
 

@@ -14,6 +14,8 @@ import yield1 from '../assets/yield1.png'
 import yield2 from '../assets/yield2.png'
 import yield3 from '../assets/yield3.png'
 import yield4 from '../assets/yield4.png'
+import ScrollToTop from '../Components/ScrollToTop'
+
 
 const YieldMax = (props) => {
 
@@ -30,7 +32,7 @@ const YieldMax = (props) => {
     }
 
     useEffect(() => {
-        const interval = setInterval(() => { carouselInfiniteScroll() }, 5000)
+        const interval = setInterval(() => { carouselInfiniteScroll() }, 10000)
 
         console.log(step)
         return () => clearInterval(interval)
@@ -40,6 +42,7 @@ const YieldMax = (props) => {
     return (
         <div>
             <Navbar />
+            <ScrollToTop />
             <img src={eprocurement2} className='w-full md:rounded-[20px] overflow-hidden flex md:hidden' />
             <div className='px-4 md:px-8 lg:px-24  pt-4 md:pt-16 flex justify-center pb-4 '>
 

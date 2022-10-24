@@ -9,6 +9,7 @@ import farm5 from '../assets/farm5.png'
 import { IoMdArrowDropleftCircle, IoMdArrowDroprightCircle } from 'react-icons/io'
 import Footer from '../Components/Footer'
 import { useNavigate } from 'react-router-dom'
+import ScrollToTop from '../Components/ScrollToTop'
 
 const ComboTrader = (props) => {
 
@@ -36,6 +37,7 @@ const ComboTrader = (props) => {
   return (
     <div>
       <Navbar />
+      <ScrollToTop />
       <div className='px-4 md:px-8 lg:px-24  pt-4 md:pt-16 flex justify-center pb-4 '>
 
         <div className='flex gap-5 md:gap-5 flex-col  justify-center 2xl:max-w-[1600px]'>
