@@ -52,7 +52,7 @@ const YieldMax = (props) => {
                             <p className='text-body pt-4 pb-5'>Yieldmax helps thousands of African smallholder farmers manage their farms better and increase their yield with ease by giving them data-backed agronomy advisory and operational insight.</p>
 
                             <div className='flex items-center md:items-start justify-center md:justify-start'>
-                                <a href='https://play.google.com/store/apps/details?id=kitovu.com.ng'><img src={google} className='w-[150px]' /></a> 
+                                <a href='https://play.google.com/store/apps/details?id=kitovu.com.ng' target='_blank'><img src={google} className='w-[150px]' /></a> 
                             </div>
 
 
@@ -77,7 +77,7 @@ const YieldMax = (props) => {
                 <img src={vacancy} className='w-full h-full' />
                 <div className='w-full py-14 md:py-auto flex flex-col gap-5 items-center md:items-start px-4 md:px-8 lg:px-24  '>
                     <h1 className='text-2xl md:text-3xl lg:text-4xl text-left'>Yieldmax your  farm in your pocket.</h1>
-                    <a href='https://play.google.com/store/apps/details?id=kitovu.com.ng'><img src={google} className='w-[150px]' /></a> 
+                    <a href='https://play.google.com/store/apps/details?id=kitovu.com.ng' target='_blank'><img src={google} className='w-[150px]' /></a> 
                 </div>
 
             </section>
