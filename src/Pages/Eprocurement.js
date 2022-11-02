@@ -10,6 +10,11 @@ import eprocurement1 from '../assets/eprocurement-image.png'
 import eprocurement2 from '../assets/eprom.png'
 import { useNavigate } from 'react-router-dom'
 import ScrollToTop from '../Components/ScrollToTop'
+import eprocure1 from '../assets/new/eprocure1.png'
+import eprocure2 from '../assets/new/eprocure2.png'
+import eprocure3 from '../assets/new/eprocure3.png'
+import eprocure4 from '../assets/new/eprocure4.png'
+
 
 const Eprocurement = (props) => {
 
@@ -28,7 +33,6 @@ const Eprocurement = (props) => {
     useEffect(() => {
         const interval = setInterval(() => { carouselInfiniteScroll() }, 5000)
 
-        console.log(step)
         return () => clearInterval(interval)
     })
 
@@ -45,13 +49,13 @@ const Eprocurement = (props) => {
                         <div className='w-full pl-4 md:pl-0 pr-4 md:pr-0 '>
 
 
-                            <h1 className='text-black max-w-[560px] font-semibold text-2xl md:text-3xl lg:text-5xl mt-2'> The one-stop platform for getting all your desired agricultural products.</h1>
-                            <p className='text-body pt-4 pb-5'>  E-procurement enables the sourcing of superior quality agro-products and delivering them to thousands of processors, companies, and exporters of agricultural products without any hassle. It is hitting the “best product purchase” jackpot without any stress at all.</p>
+                            <h1 className='text-[#1D3444] max-w-[560px] font-semibold text-2xl md:text-3xl lg:text-5xl mt-2'> The one-stop platform for getting all your desired agricultural products.</h1>
+                            <p className='text-body pt-4 pb-5'>  EProcure enables the sourcing of superior quality agro-products and delivering them to thousands of processors, companies, and exporters of agricultural products without any hassle. It is hitting the “best product purchase” jackpot without any stress at all.</p>
 
                             <div className='flex items-center md:items-start justify-center md:justify-start'>
                                 <button className='max-w-[182px] w-[182px] bg-[#F58A071A] px-6 py-2.5 bg-[#F58A07] text-white hover:bg-white hover:text-[#F58A07]  rounded-3xl font-medium md:font-semibold' onClick={() => {
-                                    navigate('/e-procurement/form')
-                                }}>purchase commodities</button>
+                                    navigate('/e-procure/form')
+                                }}>Purchase Commodities</button>
                             </div>
 
 
@@ -60,7 +64,7 @@ const Eprocurement = (props) => {
 
                         <div className='row-start-1 md:col-start-2   relative'>
 
-                            <img src={eprocurement1} className='w-full md:rounded-[20px] overflow-hidden hidden md:flex' />
+                            <img src={eprocure1} className='w-full md:rounded-[20px] overflow-hidden hidden md:flex' />
 
 
                         </div>
@@ -73,13 +77,13 @@ const Eprocurement = (props) => {
 
 
             <section className='grid md:grid-cols-2 md:gap-10 items-center relative bg-[#F58A07] text-white mb-8 lg:mb-24'>
-                <img src={vacancy} className='w-full h-full' />
+                <img src={eprocure2} className='w-full h-full' />
                 <div className='w-full py-14 md:py-auto flex flex-col gap-5 items-center md:items-start px-4 md:px-8 lg:px-24  '>
                     <h1 className='text-2xl md:text-3xl lg:text-4xl text-left'>Sourcing and delivery of agricultural  products made easy with data-driven technology.</h1>
                     <div className='flex items-center md:items-start justify-center md:justify-start'>
                                 <button className='max-w-[182px] w-[182px] px-6 py-2.5 bg-white text-[#F58A07] hover:bg-[#F58A07] hover:text-white border border-white  rounded-3xl font-medium md:font-semibold' onClick={() => {
-                                    navigate('/e-procurement/form')
-                                }}>Purchase commodities</button>
+                                    navigate('/e-procure/form')
+                                }}>Purchase Commodities</button>
                             </div>
 
 
@@ -102,7 +106,7 @@ const Eprocurement = (props) => {
                         <div className='row-start-1 md:col-start-1   relative'>
 
                             <div className='w-[95px] h-[95px] rounded-[20px] bg-[#F58A07] absolute top-[128px] left-[-47.5px] mix-blend-multiply'></div>
-                            <img src={image1} className='w-full md:rounded-[20px] overflow-hidden' />
+                            <img src={eprocure3} className='w-full md:rounded-[20px] overflow-hidden' />
 
                         </div>
 
@@ -124,7 +128,7 @@ const Eprocurement = (props) => {
                         <div className='row-start-1 md:col-start-2   relative'>
 
                             <div className='w-[95px] h-[95px] rounded-[20px] bg-[#F58A07] absolute top-[-47.5px] right-[47.5px] mix-blend-multiply'></div>
-                            <img src={farm12} className='w-full md:rounded-[20px] overflow-hidden' />
+                            <img src={eprocure4} className='w-full md:rounded-[20px] overflow-hidden' />
 
                         </div>
 

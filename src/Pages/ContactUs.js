@@ -31,7 +31,7 @@ const ContactUs = (props) => {
                     setLoading(false)
                     toast.error('Problem adding contact')
                 })
-            console.log("Document written with ID: ", docRef.id);
+            // console.log("Document written with ID: ", docRef.id);
         } catch (e) {
             setLoading(false)
             console.error("Error adding document: ", e);
@@ -45,10 +45,10 @@ const ContactUs = (props) => {
         <div>
             <ScrollToTop />
             <Navbar />
-            <div className='px-4 md:px-8 lg:px-24  pt-4 md:pt-16 flex justify-center pb-4 '>
+            <div className='px-4 md:px-8 lg:px-24  pt-4 md:pt-16 flex justify-center pb-4 mt-6'>
 
                 <div className='flex gap-5 md:gap-10 flex-col md:flex-row  justify-center 2xl:max-w-[1600px] py-8 md:py-14'>
-                    <section className='mb-8'>
+                    <section className='mb-8 mt-[50px] md:mt-0 w-full'>
 
                         <div>
                             <h1 className='text-header max-w-[560px] font-semibold text-2xl md:text-3xl lg:text-5xl mt-2'>Have a question ? Let’s get in touch with us.</h1>
@@ -109,7 +109,7 @@ const ContactUs = (props) => {
 
                     </section>
 
-                    <section className='mb-24'>
+                    <section className='mb-0 md:mb-24 w-full'>
                         <div className='flex justify-between flex-col md:flex-row gap-4 md:gap-8 mb-8 md:mb-16'>
                             <div className='w-full'>
                                 <h3 className='text-xl text-[#0D1317] mb-1 md:mb-4'>Location</h3>
@@ -118,7 +118,7 @@ const ContactUs = (props) => {
                             <div className='w-full'>
                                 <h3 className='text-xl text-[#0D1317] mb-1 md:mb-4'>Contact Us</h3>
                                 {/* <a href="tel:+4733378901" className='text-body text-sm md:text-base'>+47 333 78 901</a> */}
-                                <br />
+
                                 <a href="mailto:info@kitovu.com.ng" className='text-body text-sm md:text-base'>info@kitovu.com.ng</a>
                             </div>
                         </div>

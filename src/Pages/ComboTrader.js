@@ -6,6 +6,10 @@ import farm11 from '../assets/farm11.png'
 import farm2 from '../assets/farm2.png'
 import farm3 from '../assets/farm3.png'
 import farm5 from '../assets/farm5.png'
+import combo1 from '../assets/new/combo1.png'
+import combo2 from '../assets/new/combo2.png'
+import combo3 from '../assets/new/combo3.png'
+import combo4 from '../assets/new/combo4.png'
 import { IoMdArrowDropleftCircle, IoMdArrowDroprightCircle } from 'react-icons/io'
 import Footer from '../Components/Footer'
 import { useNavigate } from 'react-router-dom'
@@ -29,7 +33,7 @@ const ComboTrader = (props) => {
   useEffect(() => {
     const interval = setInterval(() => { carouselInfiniteScroll() }, 5000)
 
-    console.log(step)
+
     return () => clearInterval(interval)
   })
 
@@ -49,7 +53,7 @@ const ComboTrader = (props) => {
               <p className='text-body pt-4 pb-5'>ComboTrader helps thousands of customers achieve financial freedom by connecting them to the right agricultural product suppliers, storing their purchases for them, and selling the purchase on the customer’s terms and conditions.</p>
 
               <div className='flex items-center md:items-start justify-center md:justify-start'>
-                <button className='max-w-[175px] w-[175px] bg-[#F58A071A] px-6 py-2.5 bg-[#F58A07] text-white hover:bg-white hover:text-[#F58A07]  rounded-3xl font-medium md:font-semibold' onClick={() => { navigate('/combo-trader/work_with_us') }}>Work With Us</button>
+                <button className='max-w-[175px] w-[175px] bg-[#F58A071A] px-6 py-2.5 bg-[#F58A07] text-white hover:bg-white hover:text-[#F58A07]  rounded-3xl font-medium md:font-semibold' onClick={() => { navigate('/combo-trader/work_with_us') }}>Start Trading Now</button>
               </div>
 
 
@@ -58,7 +62,7 @@ const ComboTrader = (props) => {
 
             <div className='row-start-1 md:col-start-2   relative'>
 
-              <img src={farm11} className='w-full md:rounded-[20px] overflow-hidden' />
+              <img src={combo1} className='w-full md:rounded-[20px] overflow-hidden' />
 
             </div>
 
@@ -70,7 +74,7 @@ const ComboTrader = (props) => {
             <div className='row-start-1 md:col-start-1   relative'>
 
               <div className='w-[95px] h-[95px] rounded-[20px] bg-[#F58A07] absolute top-[128px] left-[-47.5px] mix-blend-multiply'></div>
-              <img src={farm3} className='w-full md:rounded-[20px] overflow-hidden' />
+              <img src={combo2} className='w-full md:rounded-[20px] overflow-hidden' />
 
             </div>
 
@@ -91,7 +95,7 @@ const ComboTrader = (props) => {
             <div className='row-start-1 md:col-start-2   relative'>
 
               <div className='w-[95px] h-[95px] rounded-[20px] bg-[#F58A07] absolute top-[-47.5px] right-[47.5px] mix-blend-multiply'></div>
-              <img src={farm5} className='w-full md:rounded-[20px] overflow-hidden' />
+              <img src={combo3} className='w-full md:rounded-[20px] overflow-hidden' />
 
             </div>
 
@@ -109,7 +113,7 @@ const ComboTrader = (props) => {
             <div className='row-start-1 md:col-start-1   relative'>
 
               <div className='w-[95px] h-[95px] rounded-[20px] bg-[#F58A07] absolute top-[128px] left-[-47.5px] mix-blend-multiply'></div>
-              <img src={farm2} className='w-full md:rounded-[20px] overflow-hidden' />
+              <img src={combo4} className='w-full md:rounded-[20px] overflow-hidden' />
 
             </div>
 
@@ -119,7 +123,7 @@ const ComboTrader = (props) => {
               <p className='text-body pt-4 pb-5'> Avoid the stress of looking for a buyer or marketing your products. We’ll facilitate sales to a genuine buyer at a better price, and you’ll receive your revenue directly in your bank account.</p>
 
               <div className='flex items-center md:items-start justify-center md:justify-start'>
-                <button className='max-w-[175px] w-[175px] bg-[#F58A071A] px-6 py-2.5 bg-[#F58A07] text-white hover:bg-white hover:text-[#F58A07]  rounded-3xl font-medium md:font-semibold' onClick={() => { navigate('/combo-trader/work_with_us') }}>Work With Us</button>
+                <button className='max-w-[175px] w-[175px] bg-[#F58A071A] px-6 py-2.5 bg-[#F58A07] text-white hover:bg-white hover:text-[#F58A07]  rounded-3xl font-medium md:font-semibold' onClick={() => { navigate('/combo-trader/work_with_us') }}>Start Trading Now</button>
               </div>
 
 

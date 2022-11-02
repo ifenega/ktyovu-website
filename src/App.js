@@ -14,6 +14,7 @@ import ComboTrader from './Pages/ComboTrader';
 import Eprocurement from './Pages/Eprocurement';
 import EprocurementForm from './Pages/EprocurementForm';
 import YieldMax from './Pages/YieldMax';
+import AboutUs from './Pages/AboutUs';
 
 function App() {
 
@@ -37,10 +38,11 @@ function App() {
         <Route path="/" element={<Home db={db} />} />
         <Route path="/combo-trader" element={<ComboTrader db={db} />} />
         <Route path="/yield-max" element={<YieldMax db={db} />} />
-        <Route path="/e-procurement" element={<Eprocurement db={db} />} />
+        <Route path="/about-us" element={<AboutUs db={db} />} />
+        <Route path="/e-procure" element={<Eprocurement db={db} />} />
         <Route path='/contact_us' element={<ContactUs db={db} />} />
         <Route path='/combo-trader/work_with_us' element={<ComboTraderForm db={db} />} />
-        <Route path='/e-procurement/form' element={<EprocurementForm db={db} />} />
+        <Route path='/e-procure/form' element={<EprocurementForm db={db} />} />
       </Routes>
 
       <ToastContainer

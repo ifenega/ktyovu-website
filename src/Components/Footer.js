@@ -42,7 +42,7 @@ const Footer = (props) => {
                     setLoading(false)
                 })
 
-            console.log("Document written with ID: ", docRef.id);
+            // console.log("Document written with ID: ", docRef.id);
         } catch (e) {
             toast.error('Try again')
             console.error("Error adding document: ", e);
@@ -92,8 +92,8 @@ const Footer = (props) => {
                     <div>
                         <div className='flex flex-col gap-3 text-white'>
                             <h1 className='font-medium pb-2'>Company</h1>
-                            {/* <Link to='' >About Us </Link>
-                            <Link to='' >Career</Link> */}
+                            <Link to='/about-us' >About Us </Link>
+                            {/* <Link to='' >Career</Link> */}
                             <Link to='/contact_us' >Contact Us</Link>
                             <Link to='/' >Services</Link>
 
@@ -189,7 +189,7 @@ const Footer = (props) => {
                                 <div><IoIosArrowDown className={`${company && ' rotate-180 '} transition-all ease-in-out delay-200`} /></div>
                             </div>
                             <div className={`${company ? 'flex ' : 'hidden '} flex-col mt-3 gap-3`}>
-                                {/* <Link to='' >About Us </Link> */}
+                                <Link to='/about-us' >About Us </Link>
                                 {/* <Link to='' >Career</Link> */}
                                 <Link to='/contact_us' >Contact Us</Link>
                                 <Link to='/' >Services</Link>

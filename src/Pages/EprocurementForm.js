@@ -13,14 +13,14 @@ import ScrollToTop from '../Components/ScrollToTop';
 
 const EprocurementForm = (props) => {
 
-    console.log(props)
+
     const [loading, setLoading] = useState(false)
 
 
     const onSubmit = async (values, actions) => {
         setLoading(true)
         try {
-            const docRef = await addDoc(collection(props.db, "E-procurement"), {
+            const docRef = await addDoc(collection(props.db, "E-procure"), {
 
                 email: values.email,
                 name: values.name,
@@ -42,7 +42,7 @@ const EprocurementForm = (props) => {
                     setLoading(false)
                     toast.error('Problem adding contact')
                 })
-            console.log("Document written with ID: ", docRef.id);
+            // console.log("Document written with ID: ", docRef.id);
         } catch (e) {
             setLoading(false)
             console.error("Error adding document: ", e);

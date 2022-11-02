@@ -2,7 +2,7 @@ import React from "react";
 
 
 const LoadingSpinner = () => {
-  console.log('jam')
+
   return (
     <svg
       role="status"

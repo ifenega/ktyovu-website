@@ -10,11 +10,17 @@ import eprocurement1 from '../assets/eprocurement-image.png'
 import eprocurement2 from '../assets/eprom.png'
 import { useNavigate } from 'react-router-dom'
 import google from '../assets/googlePlay.svg'
-import yield1 from '../assets/yield1.png'
-import yield2 from '../assets/yield2.png'
-import yield3 from '../assets/yield3.png'
-import yield4 from '../assets/yield4.png'
+// import yield1 from '../assets/yield1.png'
+// import yield2 from '../assets/yield2.png'
+// import yield3 from '../assets/yield3.png'
+// import yield4 from '../assets/yield4.png'
 import ScrollToTop from '../Components/ScrollToTop'
+import eprocure2 from '../assets/new/eprocure2.png'
+import yield1 from '../assets/new/yield1.png'
+import yield2 from '../assets/new/yield2.png'
+import yield3 from '../assets/new/yield3.png'
+import yield4 from '../assets/new/yield4.png'
+import yield5 from '../assets/new/yield5.png'
 
 
 const YieldMax = (props) => {
@@ -34,7 +40,6 @@ const YieldMax = (props) => {
     useEffect(() => {
         const interval = setInterval(() => { carouselInfiniteScroll() }, 10000)
 
-        console.log(step)
         return () => clearInterval(interval)
     })
 
@@ -43,7 +48,7 @@ const YieldMax = (props) => {
         <div>
             <Navbar />
             <ScrollToTop />
-            <img src={eprocurement2} className='w-full md:rounded-[20px] overflow-hidden flex md:hidden' />
+            <img src={yield1} className='w-full md:rounded-[20px] overflow-hidden flex md:hidden' />
             <div className='px-4 md:px-8 lg:px-24  pt-4 md:pt-16 flex justify-center pb-4 '>
 
                 <div className='flex gap-5 md:gap-5 flex-col  justify-center 2xl:max-w-[1600px]'>
@@ -51,7 +56,7 @@ const YieldMax = (props) => {
                         <div className='w-full pl-4 md:pl-0 pr-4 md:pr-0 '>
 
 
-                            <h1 className='text-black max-w-[560px] font-semibold text-2xl md:text-3xl lg:text-5xl mt-2'> The one-stop platform for getting all your desired agricultural products.</h1>
+                            <h1 className='text-[#1D3444] max-w-[560px] font-semibold text-2xl md:text-3xl lg:text-5xl mt-2'> The one-stop platform for getting all your desired agricultural products.</h1>
                             <p className='text-body pt-4 pb-5'>Yieldmax helps thousands of African smallholder farmers manage their farms better and increase their yield with ease by giving them data-backed agronomy advisory and operational insight.</p>
 
                             <div className='flex items-center md:items-start justify-center md:justify-start'>
@@ -64,7 +69,7 @@ const YieldMax = (props) => {
 
                         <div className='row-start-1 md:col-start-2   relative'>
 
-                            <img src={eprocurement1} className='w-full md:rounded-[20px] overflow-hidden hidden md:flex' />
+                            <img src={yield1} className='w-full md:rounded-[20px] overflow-hidden hidden md:flex' />
 
 
                         </div>
@@ -77,7 +82,7 @@ const YieldMax = (props) => {
 
 
             <section className='grid md:grid-cols-2 md:gap-10 items-center relative bg-[#F58A07] text-white mb-8 lg:mb-24'>
-                <img src={vacancy} className='w-full h-full' />
+                <img src={eprocure2} className='w-full h-full' />
                 <div className='w-full py-14 md:py-auto flex flex-col gap-5 items-center md:items-start px-4 md:px-8 lg:px-24  '>
                     <h1 className='text-2xl md:text-3xl lg:text-4xl text-left'>Yieldmax your  farm in your pocket.</h1>
                     <a href='https://play.google.com/store/apps/details?id=kitovu.com.ng' target='_blank'><img src={google} className='w-[150px]' /></a> 
@@ -93,7 +98,7 @@ const YieldMax = (props) => {
                         <div className='row-start-1 md:col-start-1   relative'>
 
                             <div className='w-[95px] h-[95px] rounded-[20px] bg-[#F58A07] absolute top-[128px] left-[-47.5px] mix-blend-multiply'></div>
-                            <img src={yield1} className='w-full md:rounded-[20px] overflow-hidden' />
+                            <img src={yield2} className='w-full md:rounded-[20px] overflow-hidden' />
 
                         </div>
 
@@ -115,7 +120,7 @@ const YieldMax = (props) => {
                         <div className='row-start-1 md:col-start-2   relative'>
 
                             <div className='w-[95px] h-[95px] rounded-[20px] bg-[#F58A07] absolute top-[-47.5px] right-[47.5px] mix-blend-multiply'></div>
-                            <img src={yield2} className='w-full md:rounded-[20px] overflow-hidden' />
+                            <img src={yield3} className='w-full md:rounded-[20px] overflow-hidden' />
 
                         </div>
 
@@ -135,7 +140,7 @@ const YieldMax = (props) => {
                         <div className='row-start-1 md:col-start-1   relative'>
 
                             <div className='w-[95px] h-[95px] rounded-[20px] bg-[#F58A07] absolute top-[128px] left-[-47.5px] mix-blend-multiply'></div>
-                            <img src={yield3} className='w-full md:rounded-[20px] overflow-hidden' />
+                            <img src={yield4} className='w-full md:rounded-[20px] overflow-hidden' />
 
                         </div>
 
@@ -155,14 +160,14 @@ const YieldMax = (props) => {
                         <div className='row-start-1 md:col-start-2   relative'>
 
                             <div className='w-[95px] h-[95px] rounded-[20px] bg-[#F58A07] absolute top-[-47.5px] right-[47.5px] mix-blend-multiply'></div>
-                            <img src={yield4} className='w-full md:rounded-[20px] overflow-hidden' />
+                            <img src={yield5} className='w-full md:rounded-[20px] overflow-hidden' />
 
                         </div>
 
                         <div className='w-full pl-4 md:pl-0 pr-4 md:pr-0 '>
 
                             <h1 className='text-black max-w-[560px] font-semibold text-2xl md:text-3xl  mt-2'>Input Manufacturer</h1>
-                            <p className='text-body pt-4 pb-5'>Discover and get access to post-verified quality products.  </p>
+                            <p className='text-body pt-4 pb-5'>Discover and get access to verified farmers who need your products; make your customers love you by providing them timely good agriculture knowledge practice specific to your product.</p>
 
 
 

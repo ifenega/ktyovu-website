@@ -13,7 +13,7 @@ import ScrollToTop from '../Components/ScrollToTop';
 
 const ComboTraderForm = (props) => {
 
-    console.log(props)
+
     const [loading, setLoading] = useState(false)
 
 
@@ -40,7 +40,7 @@ const ComboTraderForm = (props) => {
                     setLoading(false)
                     toast.error('Problem adding contact')
                 })
-            console.log("Document written with ID: ", docRef.id);
+            // console.log("Document written with ID: ", docRef.id);
         } catch (e) {
             setLoading(false)
             console.error("Error adding document: ", e);
