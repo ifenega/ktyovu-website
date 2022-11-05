@@ -59,7 +59,7 @@ const AboutUs = (props) => {
         <div>
             <Navbar />
             <ScrollToTop />
-            <div className='mt-20'>
+            <div className='mt-[56px] md:mt-20'>
 
                 <section className='px-4 md:px-8 lg:px-24  pt-4 md:pt-16 pb-6 bg-[#DCEAF5] flex justify-center '>
 

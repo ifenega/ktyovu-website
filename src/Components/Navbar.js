@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
+import logo from '../assets/new/kitovu-logo.svg'
+
 
 const Navbar = () => {
 
@@ -8,11 +10,13 @@ const Navbar = () => {
 
   return (
 
-    <div className='flex justify-center bg-white z-[99] fixed top-0 w-full h-20 shadow'>
+    <div className='flex justify-center bg-white z-[99] fixed top-0 w-full h-[56px] md:h-20 shadow'>
 
       <nav className='px-4 md:px-8 lg:px-24  w-full z-[99]   bg-white  2xl:max-w-[1600px] '>
         <div className='flex items-center justify-between h-full w-full '>
-          <Link to='/' className='text-header font-semibold text-[32px] flex items-center'>KITOVU</Link>
+          <Link to='/' className='text-header font-semibold text-[32px] flex items-center w-fit'>
+            <img src={logo} alt='kitovu logo' className='h-6 md:h-10' />
+          </Link>
 
           {/* mobile */}
           {/* <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
@@ -28,7 +32,7 @@ const Navbar = () => {
           </div>
 
           {/* nav list for mobile */}
-          <div className={`${navTransform ? 'translate-y-0   left-0' : "left-[130vh] "} bg-white h-[100vh] top-20  m-auto px-4 fixed transition-all delay-300 ease-[cubic-bezier(0.455,0.03,0.515,0.955)] w-full z-10 md:hidden`}>
+          <div className={`${navTransform ? 'translate-y-0   left-0' : "left-[130vh] "} bg-white h-[100vh] top-[56px]  m-auto px-4 fixed transition-all delay-300 ease-[cubic-bezier(0.455,0.03,0.515,0.955)] w-full z-10 md:hidden`}>
 
             <div className=' flex items-center flex-col min-h-1/2  text-[#394149] text-base font-medium' role='mobile-navbar'>
               <Link to='/' className='py-5 w-full border-b-[1px] border-gray-200 text-center' >

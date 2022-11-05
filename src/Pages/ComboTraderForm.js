@@ -10,48 +10,83 @@ import LoadingSpinner from '../Components/LoadingSpinner';
 import { addDoc, collection } from 'firebase/firestore';
 import { toast } from 'react-toastify';
 import ScrollToTop from '../Components/ScrollToTop';
+import { usePaystackPayment } from 'react-paystack';
+import PaystackPop from '@paystack/inline-js'
 
 const ComboTraderForm = (props) => {
 
 
-    const [loading, setLoading] = useState(false)
 
+
+    const [loading, setLoading] = useState(false)
+    const [email, setEmail] = useState('')
+    const [reference, setReference] = useState('')
+
+   
 
     const onSubmit = async (values, actions) => {
+      setReference('CT' + (Math.random() + 1).toString().substring(7))
+        // setEmail(values.email)
+
+        const paystack = new PaystackPop()
+        paystack.newTransaction({
+            key: 'pk_test_ddb82082e96a09b27bf5785bfb1d604e6f53e791',
+            amount: 200000,
+            email: values.email,
+            reference: reference,
+            currency: 'NGN',
+            onSuccess(transaction){
+                toast.success('Payment successful')
+                let message =  `Payment Complete! Reference ${transaction.reference}`
+                alert(message)
+            },
+            onCancel(){
+                alert("You have cancelled the transaction")
+            }
+        })
+
+
+
+
+
+
         setLoading(true)
-        try {
-            const docRef = await addDoc(collection(props.db, "Combo trader"), {
 
-                email: values.email,
-                name: values.name,
-                phone: values.phone,
-                commodities: values.commodities,
-                countries: values.countries,
-                trading_range: values.trading_range,
-                storage_duration: values.storage_duration,
-                services: values.services,
-                reference: 'CT' + (Math.random() + 1).toString(36).substring(7),
-            })
-                .then((response) => {
-                    setLoading(false)
-                    toast.success('Success.')
 
-                }).catch((err) => {
-                    setLoading(false)
-                    toast.error('Problem adding contact')
-                })
-            // console.log("Document written with ID: ", docRef.id);
-        } catch (e) {
-            setLoading(false)
-            console.error("Error adding document: ", e);
-        }
+        // try {
+        //     const docRef = await addDoc(collection(props.db, "Combo trader"), {
+
+        //         email: values.email,
+        //         name: values.name,
+        //         phone: values.phone,
+        //         commodities: values.commodities,
+        //         countries: values.countries,
+        //         trading_range: values.trading_range,
+        //         storage_duration: values.storage_duration,
+        //         services: values.services,
+        //         reference: reference,
+        // date: (new Date()).getTime().toString()
+        //     })
+        //         .then((response) => {
+        //             setLoading(false)
+        //             toast.success('Success.')
+
+        //         }).catch((err) => {
+        //             setLoading(false)
+        //             toast.error('Problem adding contact')
+        //         })
+        //     // console.log("Document written with ID: ", docRef.id);
+        // } catch (e) {
+        //     setLoading(false)
+        //     console.error("Error adding document: ", e);
+        // }
 
     }
     //form for combo trader
 
     return (
         <div>
-             <ScrollToTop />
+            <ScrollToTop />
             <Navbar />
             <div className='px-4 md:px-8 lg:px-24  pt-4 md:pt-16 flex justify-center pb-4 '>
                 <div className='flex gap-5 md:gap-5 flex-col  justify-center 2xl:max-w-[1600px]'>
@@ -76,9 +111,11 @@ const ComboTraderForm = (props) => {
                                         trading_range: '',
                                         storage_duration: '',
                                         services: '',
+                                        address: '',
+
 
                                     }}
-                                    validationSchema={validation}
+                                    // validationSchema={validation}
                                     onSubmit={onSubmit}
                                 >
                                     {({ values, isValid, errors, touched, setTouched, dirty, setFieldValue }) => (
@@ -283,6 +320,10 @@ const validation = Yup.object({
     phone: Yup.string()
         .required("required"),
     countries: Yup.string()
+        .required("required"),
+    address: Yup.string()
+        .required("required"),
+    commodities: Yup.string()
         .required("required"),
     trading_range: Yup.string()
         .required("required"),
