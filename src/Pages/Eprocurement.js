@@ -53,7 +53,7 @@ const Eprocurement = (props) => {
                             <p className='text-body pt-4 pb-5'>  EProcure enables the sourcing of superior quality agro-products and delivering them to thousands of processors, companies, and exporters of agricultural products without any hassle. It is hitting the “best product purchase” jackpot without any stress at all.</p>
 
                             <div className='flex items-center md:items-start justify-center md:justify-start'>
-                                <button className='max-w-[182px] w-[182px] bg-[#F58A071A] px-6 py-2.5 bg-[#F58A07] text-white hover:bg-white hover:text-[#F58A07]  rounded-3xl font-medium md:font-semibold' onClick={() => {
+                                <button className='bg-[#F58A071A] px-6 py-2.5 bg-[#F58A07] text-white hover:bg-white hover:text-[#F58A07]  rounded-3xl font-medium md:font-semibold' onClick={() => {
                                     navigate('/e-procure/form')
                                 }}>Purchase Commodities</button>
                             </div>
@@ -81,7 +81,7 @@ const Eprocurement = (props) => {
                 <div className='w-full py-14 md:py-auto flex flex-col gap-5 items-center md:items-start px-4 md:px-8 lg:px-24  '>
                     <h1 className='text-2xl md:text-3xl lg:text-4xl text-left'>Sourcing and delivery of agricultural  products made easy with data-driven technology.</h1>
                     <div className='flex items-center md:items-start justify-center md:justify-start'>
-                                <button className='max-w-[182px] w-[182px] px-6 py-2.5 bg-white text-[#F58A07] hover:bg-[#F58A07] hover:text-white border border-white  rounded-3xl font-medium md:font-semibold' onClick={() => {
+                                <button className=' px-6 py-2.5 bg-white text-[#F58A07] hover:bg-[#F58A07] hover:text-white border border-white  rounded-3xl font-medium md:font-semibold' onClick={() => {
                                     navigate('/e-procure/form')
                                 }}>Purchase Commodities</button>
                             </div>

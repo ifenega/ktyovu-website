@@ -53,7 +53,7 @@ const ComboTrader = (props) => {
               <p className='text-body pt-4 pb-5'>ComboTrader helps thousands of customers achieve financial freedom by connecting them to the right agricultural product suppliers, storing their purchases for them, and selling the purchase on the customer’s terms and conditions.</p>
 
               <div className='flex items-center md:items-start justify-center md:justify-start'>
-                <button className='max-w-[175px] w-[175px] bg-[#F58A071A] px-6 py-2.5 bg-[#F58A07] text-white hover:bg-white hover:text-[#F58A07]  rounded-3xl font-medium md:font-semibold' onClick={() => { navigate('/combo-trader/work_with_us') }}>Start Trading Now</button>
+                <button className='bg-[#F58A071A] px-6 py-2.5 bg-[#F58A07] text-white hover:bg-white hover:text-[#F58A07]  rounded-3xl font-medium md:font-semibold' onClick={() => { navigate('/combo-trader/work_with_us') }}>Start Trading Now</button>
               </div>
 
 
@@ -123,7 +123,7 @@ const ComboTrader = (props) => {
               <p className='text-body pt-4 pb-5'> Avoid the stress of looking for a buyer or marketing your products. We’ll facilitate sales to a genuine buyer at a better price, and you’ll receive your revenue directly in your bank account.</p>
 
               <div className='flex items-center md:items-start justify-center md:justify-start'>
-                <button className='max-w-[175px] w-[175px] bg-[#F58A071A] px-6 py-2.5 bg-[#F58A07] text-white hover:bg-white hover:text-[#F58A07]  rounded-3xl font-medium md:font-semibold' onClick={() => { navigate('/combo-trader/work_with_us') }}>Start Trading Now</button>
+                <button className='bg-[#F58A071A] px-6 py-2.5 bg-[#F58A07] text-white hover:bg-white hover:text-[#F58A07]  rounded-3xl font-medium md:font-semibold' onClick={() => { navigate('/combo-trader/work_with_us') }}>Start Trading Now</button>
               </div>
 
 
