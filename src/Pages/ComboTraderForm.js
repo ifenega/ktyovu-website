@@ -22,64 +22,83 @@ const ComboTraderForm = (props) => {
     const [email, setEmail] = useState('')
     const [reference, setReference] = useState('')
 
-   
+
 
     const onSubmit = async (values, actions) => {
-      setReference('CT' + (Math.random() + 1).toString().substring(7))
+        setReference('CT' + (Math.random() + 1).toString().substring(7))
         // setEmail(values.email)
-
-        const paystack = new PaystackPop()
-        paystack.newTransaction({
-            key: 'pk_test_ddb82082e96a09b27bf5785bfb1d604e6f53e791',
-            amount: 200000,
-            email: values.email,
-            reference: reference,
-            currency: 'NGN',
-            onSuccess(transaction){
-                toast.success('Payment successful')
-                let message =  `Payment Complete! Reference ${transaction.reference}`
-                alert(message)
-            },
-            onCancel(){
-                alert("You have cancelled the transaction")
-            }
-        })
-
-
-
-
-
-
         setLoading(true)
 
+        try {
+            const paystack = new PaystackPop()
+            paystack.newTransaction({
+                key: 'pk_test_ddb82082e96a09b27bf5785bfb1d604e6f53e791',
+                amount:  +values.quantity * 5500,
+                email: values.email,
+                reference: reference,
+                currency: 'NGN',
+                onSuccess(transaction) {
 
-        // try {
-        //     const docRef = await addDoc(collection(props.db, "Combo trader"), {
+                    
+                    let message = `Payment Complete! Reference ${transaction.reference}`
+                    const apiCall = async () => {
+                        try {
+                            const docRef = await addDoc(collection(props.db, "Combo trader"), {
 
-        //         email: values.email,
-        //         name: values.name,
-        //         phone: values.phone,
-        //         commodities: values.commodities,
-        //         countries: values.countries,
-        //         trading_range: values.trading_range,
-        //         storage_duration: values.storage_duration,
-        //         services: values.services,
-        //         reference: reference,
-        // date: (new Date()).getTime().toString()
-        //     })
-        //         .then((response) => {
-        //             setLoading(false)
-        //             toast.success('Success.')
+                                email: values.email,
+                                name: values.name,
+                                phone: values.phone,
+                                commodities: values.commodities,
+                                countries: values.countries,
+                                trading_range: values.trading_range,
+                                storage_duration: values.storage_duration,
+                                services: values.services,
+                                reference: reference,
+                                date: (new Date()).getTime().toString()
+                            })
+                                .then((response) => {
+                                    
+                                    setLoading(false)
+                                    toast.success('Payment successful')
+                                    // toast.success('Success.')
+                                    actions.resetForm()
+                                    // alert(message)
 
-        //         }).catch((err) => {
-        //             setLoading(false)
-        //             toast.error('Problem adding contact')
-        //         })
-        //     // console.log("Document written with ID: ", docRef.id);
-        // } catch (e) {
-        //     setLoading(false)
-        //     console.error("Error adding document: ", e);
-        // }
+                                }).catch((err) => {
+                                    apiCall()
+                                    setLoading(false)
+                                    toast.error('Problem adding contact')
+                                })
+                            // console.log("Document written with ID: ", docRef.id);
+                        } catch (e) {
+                            apiCall()
+                            setLoading(false)
+                            console.error("Error adding document: ", e);
+                        }
+                    }
+                    apiCall()
+                },
+                onCancel() {
+                    setLoading(false)
+                    alert("You have cancelled the transaction")
+                }
+            })
+        } catch (e) {
+            setLoading(false)
+            toast.error(e.message)
+        }
+
+
+
+
+        // setLoading(false)
+
+
+
+
+
+
+
 
     }
     //form for combo trader
@@ -97,7 +116,7 @@ const ComboTraderForm = (props) => {
 
                             <div>
                                 <h1 className='text-header max-w-[560px] font-semibold text-2xl md:text-3xl lg:text-5xl mt-2'>Sign up with Combo Trader</h1>
-                                <p className='text-body pt-4 pb-5'>Fill up the Formand our team would revert within 24hours to set you on the path to profitable commodity trading.</p>
+                                <p className='text-body pt-4 pb-5'>Fill the form and our team will get back to you within 24 hours to set you on the path to profitable commodity trading.</p>
                             </div>
 
                             <div>
@@ -112,6 +131,7 @@ const ComboTraderForm = (props) => {
                                         storage_duration: '',
                                         services: '',
                                         address: '',
+                                        quantity: '',
 
 
                                     }}
@@ -170,7 +190,7 @@ const ComboTraderForm = (props) => {
                                                         >
                                                             <option label="Select Country"></option>
                                                             {countries.map((item) => (
-                                                                <option value={item.name} label={item.name} >{item.name}</option>
+                                                                <option value={item.name} label={item.name} key={item.name}>{item.name}</option>
                                                             ))}
                                                         </Field>
                                                         <p className="text-red-700 text-sm mt-1">
@@ -237,6 +257,29 @@ const ComboTraderForm = (props) => {
                                                     </Field>
                                                     <p className="text-red-700 text-sm mt-1">
                                                         <ErrorMessage name="trading_range" />
+                                                    </p>
+                                                </div>
+
+                                                <div className='w-full mb-4'>
+                                                    <Field type='number' name='quantity' inputMode='numeric' placeholder='Quantity (Tons)' className={`${errors.quantity && touched.quantity && "border-red-700"} rounded-[5px] px-3.5 py-2 text-gray-800 w-full border border-[#e5e7eb]`}
+                                                        onChange={(e) => {
+                                                            let currentLetter =
+                                                                e.target.value[e.target.value.length - 1];
+                                                            let restrict = /^[^*|\":<>!#%^+=~,.?[\]{}`\\()';@&$e]+$/;
+                                                            if (!restrict.test(currentLetter)) {
+                                                            } else {
+                                                                setFieldValue(
+                                                                    "quantity",
+                                                                    e.target.value
+                                                                );
+                                                            }
+                                                        }}
+                                                    />
+                                                    <p className="text-gray-500 text-sm mt-1">
+                                                        * ₦5,500/Tons
+                                                    </p>
+                                                    <p className="text-red-700 text-sm mt-1">
+                                                        <ErrorMessage name="quantity" />
                                                     </p>
                                                 </div>
 
@@ -329,6 +372,8 @@ const validation = Yup.object({
         .required("required"),
     storage_duration: Yup.string()
         .required("required"),
+    quantity: Yup.string()
+        .required("required").min(1, 'Minimum of 1Tons'),
     phone: Yup.string()
         .required("required"),
     services: Yup.string()

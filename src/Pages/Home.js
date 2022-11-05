@@ -146,7 +146,7 @@ const Home = (props) => {
               <div className='w-full pr-4 md:pr-8 lg:pr-24 pl-4 md:pl-0'>
                 <div className='text-[#F58A07] text-sm leading-3 py-2 px-3.5 bg-white rounded-3xl my-5 md:my-0 md:mb-20 w-fit border-[#F58A07] border relative md:absolute md:top-16 md:right-8 lg:right-24'>YieldMax</div>
 
-                <h1 className='text-header max-w-[560px] font-semibold text-2xl md:text-3xl lg:text-5xl mt-2'>Go digital and increase your yield by taking advantage of our data-based  platform.</h1>
+                <h1 className='text-header max-w-[560px] font-semibold text-2xl md:text-3xl lg:text-5xl mt-10'>Go digital and increase your yield by taking advantage of our data-based  platform.</h1>
                 <p className='text-body pt-4 pb-5'>Receive insights regarding your farm’s health, beneficial tips, and many more personalised agronomic advisory.</p>
 
                 <button className='text-[#F58A07] flex  items-center  gap-2 mt-5' onClick={() => {
@@ -166,9 +166,9 @@ const Home = (props) => {
 
             <section className=' py-4 md:py-16 grid grid-cols-1 md:grid-cols-2 md:gap-10 items-center relative  2xl:rounded-[20px] px-4 md:px-8 lg:px-0 bg-[#FE8D3B1A] '>
               <div className='w-full pl-4 md:pl-8 lg:pl-24 pr-4 md:pr-0'>
-                <div className='text-[#F58A07] text-sm leading-3 py-2 px-3.5 bg-white rounded-3xl my-5 md:my-0 md:mb-20 w-fit border-[#F58A07] border relative md:absolute md:top-16 md:left-8 lg:left-24'>StorageX</div>
+                <div className='text-[#F58A07] text-sm leading-3 py-2 px-3.5 bg-white rounded-3xl my-5 md:my-0 md:mb-20 w-fit border-[#F58A07] border relative md:absolute md:top-16 '>StorageX</div>
 
-                <h1 className='text-header max-w-[560px] font-semibold text-2xl md:text-3xl lg:text-5xl mt-2'>Avoid losses and cut costs on the storage of your agricultural products.</h1>
+                <h1 className='text-header max-w-[560px] font-semibold text-2xl md:text-3xl lg:text-5xl mt-12'>Avoid losses and cut costs on the storage of your agricultural products.</h1>
                 <p className='text-body pt-4 pb-5'>Take advantage of our high-tech storage facilities nationwide to extend the shelf life of your product and convert them to collateral assets to get loans to expand your farming business.</p>
 
                 <a className='text-[#F58A07] flex  items-center  gap-2 mt-5' href='https://www.storagex.com.ng/' target='_blank'><h1>Learn more</h1> <BsArrowRight className='text-[#F58A07]' /> </a>
@@ -187,7 +187,7 @@ const Home = (props) => {
               <div className='w-full pr-4 md:pr-8 lg:pr-24 pl-4 md:pl-0'>
                 <div className='text-[#F58A07] text-sm leading-3 py-2 px-3.5 bg-white rounded-3xl my-5 md:my-0 md:mb-20 w-fit border-[#F58A07] border relative md:absolute md:top-16 md:right-8 lg:right-24'>eProcure</div>
 
-                <h1 className='text-header max-w-[560px] font-semibold text-2xl md:text-3xl lg:text-5xl mt-2'>You never have to worry about stressing to source for agricultural produce.</h1>
+                <h1 className='text-header max-w-[560px] font-semibold text-2xl md:text-3xl lg:text-5xl mt-10'>You never have to worry about stressing to source for agricultural produce.</h1>
                 <p className='text-body pt-4 pb-5'>You never have to worry about stressing to source for agricultural produce, looking for reliable logistics, or getting disappointed by suppliers ever again.   With our advanced product quality ranking algorithm, we help take the edge off. We will source the products for you, and deliver them to you wherever and whenever you want them.</p>
 
                 <button className='text-[#F58A07] flex  items-center  gap-2 mt-5' onClick={() => {
@@ -206,7 +206,7 @@ const Home = (props) => {
 
             <section className=' py-4 md:py-16 grid grid-cols-1 md:grid-cols-2 md:gap-10 items-center relative px-4 md:px-8 lg:px-0  bg-[#EDF7FF]'>
               <div className='w-full pl-4 md:pl-8 lg:pl-24 pr-4 md:pr-0 '>
-                <div className='text-[#F58A07] text-sm leading-3 py-2 px-3.5 bg-white rounded-3xl my-5 md:my-0 md:mb-20 w-fit border-[#F58A07] border relative md:absolute md:top-16 md:left-8 lg:left-24'>ComboTrader</div>
+                <div className='text-[#F58A07] text-sm leading-3 py-2 px-3.5 bg-white rounded-3xl my-5 md:my-0 md:mb-20 w-fit border-[#F58A07] border relative md:absolute md:top-16 '>ComboTrader</div>
 
                 <h1 className='text-header max-w-[560px] font-semibold text-2xl md:text-3xl lg:text-5xl mt-2'>Trade agricultural products on your own terms and conditions. </h1>
                 <p className='text-body pt-4 pb-5'>Connect with the right suppliers and earn an income by buying and selling farm produce. We will store your purchase properly for you if needed, and sell it whenever you choose.</p>
@@ -414,7 +414,7 @@ const Home = (props) => {
 
                           <div className='flex'>
                             <svg className="w-4 h-4 mr-1.5 text-[#F58A07] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                            <p className='w-full max-w-[900px]'>Get personalized advisory, crop health audits, and access to quality inputs.</p>
+                            <p className='w-full max-w-[900px]'>Sell their goods at good price to higher value markets.</p>
                           </div>
 
 
@@ -428,7 +428,7 @@ const Home = (props) => {
 
                           <div className='flex'>
                             <svg className="w-4 h-4 mr-1.5 text-[#F58A07] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                            <p className='w-full max-w-[900px]'>Sell your goods easily to higher value markets at great prices. </p>
+                            <p className='w-full max-w-[900px]'>Preserve their goods by storing it, access high value markets and finance to meet their short-term needs.</p>
                           </div>
 
 
@@ -471,10 +471,10 @@ const Home = (props) => {
 
                         </li>
                       </ul>
-                      <ul className="space-y-1  list-inside text-gray-800 mb-2">
+                      {/* <ul className="space-y-1  list-inside text-gray-800 mb-2">
 
                         <li className="flex flex-col gap-3 ">
-                          <div className='text-[#F58A07] text-sm leading-3 py-2 px-3.5 bg-white rounded-3xl w-fit border-[#F58A07] border relative '>eProcure</div>
+                          <div className='text-[#F58A07] text-sm leading-3 py-2 px-3.5 bg-white rounded-3xl w-fit border-[#F58A07] border relative mb-2'>eProcure</div>
 
                           <div className='flex'>
                             <svg className="w-4 h-4 mr-1.5 text-[#F58A07] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
@@ -509,7 +509,7 @@ const Home = (props) => {
 
 
                         </li>
-                      </ul>
+                      </ul> */}
 
                     </div>
 
@@ -553,7 +553,7 @@ const Home = (props) => {
                       <img src={find1} />
 
                       <div className='flex flex-col gap-2 '>
-                        <h2 class=" text-lg font-semibold text-gray-900 ">Agribusinesses and processors</h2>
+                        <h2 className=" text-lg font-semibold text-gray-900 ">Agribusinesses and processors</h2>
                         <ul className="space-y-1  list-inside text-gray-800 mb-2">
 
                           <li className="flex flex-col gap-3 ">
@@ -594,7 +594,7 @@ const Home = (props) => {
                       <img src={find2} />
 
                       <div className='flex flex-col gap-2 '>
-                        <h2 class=" text-lg font-semibold text-gray-900 ">Financial Institutions</h2>
+                        <h2 className=" text-lg font-semibold text-gray-900 ">Financial Institutions</h2>
                         <ul className="space-y-1  list-inside text-gray-800 mb-2">
 
                           <li className="flex flex-col gap-3 ">
@@ -636,7 +636,7 @@ const Home = (props) => {
                       <img src={find3} />
 
                       <div className='flex flex-col gap-2 '>
-                        <h2 class=" text-lg font-semibold text-gray-900 ">For Farmers</h2>
+                        <h2 className=" text-lg font-semibold text-gray-900 ">For Farmers</h2>
 
 
                         <ul className="space-y-1  list-inside text-gray-800 mb-2">
@@ -646,7 +646,7 @@ const Home = (props) => {
 
                             <div className='flex'>
                               <svg className="w-4 h-4 mr-1.5 text-[#F58A07] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                              <p className='w-full max-w-[900px]'>Get personalized advisory, crop health audits, and access to quality inputs.</p>
+                              <p className='w-full max-w-[900px]'>Sell their goods at good price to higher value markets.</p>
                             </div>
 
 
@@ -660,7 +660,7 @@ const Home = (props) => {
 
                             <div className='flex'>
                               <svg className="w-4 h-4 mr-1.5 text-[#F58A07] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                              <p className='w-full max-w-[900px]'>Sell your goods easily to higher value markets at great prices. </p>
+                              <p className='w-full max-w-[900px]'>Preserve their goods by storing it, access high value markets and finance to meet their short-term needs.</p>
                             </div>
 
 
@@ -691,7 +691,7 @@ const Home = (props) => {
 
                       <div className='flex flex-col gap-2 '>
 
-                        <h2 class=" text-lg font-semibold text-gray-900 ">Input Manufacturers</h2>
+                        <h2 className=" text-lg font-semibold text-gray-900 ">Input Manufacturers</h2>
                         <ul className="space-y-1  list-inside text-gray-800 mb-2">
 
                           <li className="flex flex-col gap-3 ">
@@ -705,7 +705,7 @@ const Home = (props) => {
 
                           </li>
                         </ul>
-                        <ul className="space-y-1  list-inside text-gray-800 mb-2">
+                        {/* <ul className="space-y-1  list-inside text-gray-800 mb-2">
 
                           <li className="flex flex-col gap-3 ">
                             <div className='text-[#F58A07] text-sm leading-3 py-2 px-3.5 bg-white rounded-3xl w-fit border-[#F58A07] border relative '>eProcure</div>
@@ -743,7 +743,7 @@ const Home = (props) => {
 
 
                           </li>
-                        </ul>
+                        </ul> */}
 
                       </div>
                     </div>
