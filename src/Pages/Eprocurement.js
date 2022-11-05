@@ -41,7 +41,7 @@ const Eprocurement = (props) => {
         <div>
             <ScrollToTop />
             <Navbar />
-            <img src={eprocurement2} className='w-full md:rounded-[20px] overflow-hidden flex md:hidden' />
+            <img src={eprocure1} className='w-full md:rounded-[20px] overflow-hidden flex md:hidden' />
             <div className='px-4 md:px-8 lg:px-24  pt-4 md:pt-16 flex justify-center pb-4 '>
 
                 <div className='flex gap-5 md:gap-5 flex-col  justify-center 2xl:max-w-[1600px]'>

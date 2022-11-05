@@ -51,8 +51,8 @@ const ContactUs = (props) => {
                     <section className='mb-8 mt-[50px] md:mt-0 w-full'>
 
                         <div>
-                            <h1 className='text-header max-w-[560px] font-semibold text-2xl md:text-3xl lg:text-5xl mt-2'>Have a question ? Let’s get in touch with us.</h1>
-                            <p className='text-body pt-4 pb-5'>Fill up the Form  and ou team will get back to within 24 hrs</p>
+                            <h1 className='text-header max-w-[560px] font-semibold text-2xl md:text-3xl lg:text-5xl mt-2'>Have a question ? Let’s get in touch with you.</h1>
+                            <p className='text-body pt-4 pb-5'>Fill the Form  and our team will get back to you within 24 hours</p>
                         </div>
 
                         <div>
