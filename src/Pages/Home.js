@@ -64,7 +64,7 @@ const Home = (props) => {
       <Navbar />
       <ScrollToTop />
       <div className='mt-[56px] md:mt-20'>
-        <img src={bg1} aria-label='farmer in a corn field' className='flex md:hidden' />
+        <img src={landing1} aria-label='farmer in a corn field' className='flex md:hidden' />
         <section className='px-4 md:px-8 lg:px-24  pt-4 md:pt-16 pb-6 bg-[#DCEAF5] flex justify-center '>
 
           <div className='flex gap-5 md:gap-10 flex-col md:flex-row items-end justify-center 2xl:max-w-[1600px]'>
