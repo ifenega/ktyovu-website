@@ -218,6 +218,7 @@ const ComboTraderForm = (props) => {
                                                 <div className='w-full mb-4'>
                                                     <Field
                                                         className={`${errors.commodities && touched.commodities && "border-red-700"} rounded-[5px] pr-10 px-3.5 py-2 text-gray-800 w-full border border-[#e5e7eb]`}
+
                                                         as="select"
                                                         name="commodities"
                                                         id="commodities"

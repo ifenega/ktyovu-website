@@ -41,9 +41,9 @@ const Navbar = () => {
               <Link to='/about-us' className='py-5 w-full border-b-[1px] border-gray-200 text-center' >
                 About us
               </Link>
-              <Link to='/combo-trader' className='py-5 w-full border-b-[1px] border-gray-200 text-center' >
+              {/* <Link to='/combo-trader' className='py-5 w-full border-b-[1px] border-gray-200 text-center' >
                 Why us
-              </Link>
+              </Link> */}
               <Link to='/contact_us' className='py-5 w-full border-b-[1px] border-gray-200 text-center ' >
                 Contact us
               </Link>
@@ -66,9 +66,9 @@ const Navbar = () => {
               <li>
                 <Link to="/about-us" className="block py-2 pr-4 pl-3 text-[#394149] md:p-0 hover:underline  hover:transition-shadow ">About us</Link>
               </li>
-              <li>
+              {/* <li>
                 <Link to="/combo-trader" className="block py-2 pr-4 pl-3 text-[#394149] md:p-0 hover:underline ">Why us</Link>
-              </li>
+              </li> */}
               <li>
                 <Link to="/contact_us" className="block py-2 pr-4 pl-3 text-[#394149] delay-150 md:p-0 hover:underline ">Contact Us</Link>
               </li>
