@@ -12,12 +12,14 @@ import { toast } from 'react-toastify';
 import ScrollToTop from '../Components/ScrollToTop';
 import { usePaystackPayment } from 'react-paystack';
 import PaystackPop from '@paystack/inline-js'
+import Select from 'react-select';
+import makeAnimated from 'react-select/animated';
 
 const ComboTraderForm = (props) => {
 
 
 
-
+    const animatedComponents = makeAnimated()
     const [loading, setLoading] = useState(false)
     const [email, setEmail] = useState('')
     const [reference, setReference] = useState('')
@@ -33,13 +35,13 @@ const ComboTraderForm = (props) => {
             const paystack = new PaystackPop()
             paystack.newTransaction({
                 key: 'pk_test_ddb82082e96a09b27bf5785bfb1d604e6f53e791',
-                amount:  +values.quantity * 5500,
+                amount: +values.quantity * 5500,
                 email: values.email,
                 reference: reference,
                 currency: 'NGN',
                 onSuccess(transaction) {
 
-                    
+
                     let message = `Payment Complete! Reference ${transaction.reference}`
                     const apiCall = async () => {
                         try {
@@ -57,7 +59,7 @@ const ComboTraderForm = (props) => {
                                 date: (new Date()).getTime().toString()
                             })
                                 .then((response) => {
-                                    
+
                                     setLoading(false)
                                     toast.success('Payment successful')
                                     // toast.success('Success.')
@@ -89,20 +91,42 @@ const ComboTraderForm = (props) => {
         }
 
 
+        // console.log(values)
+
 
 
         // setLoading(false)
 
 
 
-
-
-
-
-
     }
-    //form for combo trader
 
+
+    const options = [
+        { value: 'Commodities Aggregation as a Service', label: 'Commodities Aggregation as a Service' },
+        { value: 'Storage as a Service', label: 'Storage as a Service' },
+        { value: 'Commodities Sales as a Service', label: 'Commodities Sales as a Service' }
+    ]
+
+    const customStyles = {
+        control: (base, state) => ({
+            ...base,
+            // height: 47,
+            minHeight: 47,
+
+        }),
+        dropdownIndicator: (base) => ({
+            ...base,
+            color: 'black', // Custom colour
+            marginRight: '5px',
+        }),
+        indicatorSeparator: (base) => ({
+            ...base,
+            display: "none",
+        }),
+    }
+
+    //form for combo trader
     return (
         <div>
             <ScrollToTop />
@@ -129,13 +153,13 @@ const ComboTraderForm = (props) => {
                                         countries: '',
                                         trading_range: '',
                                         storage_duration: '',
-                                        services: '',
+                                        services: [],
                                         address: '',
                                         quantity: '',
 
 
                                     }}
-                                    // validationSchema={validation}
+                                    validationSchema={validation}
                                     onSubmit={onSubmit}
                                 >
                                     {({ values, isValid, errors, touched, setTouched, dirty, setFieldValue }) => (
@@ -306,12 +330,29 @@ const ComboTraderForm = (props) => {
 
 
                                                 <div className='w-full mb-4'>
-                                                    <Field
+
+                                                    <Select
+                                                        name='services'
+                                                        closeMenuOnSelect={false}
+                                                        components={animatedComponents}
+                                                        isMulti
+                                                        styles={customStyles}
+                                                        options={options}
+                                                        placeholder='Select service you would like to trade'
+                                                        onChange={(options) => {
+
+                                                            const optionsValue = options.map((item) => item.value)
+                                                            setFieldValue("services", optionsValue)
+                                                        }}
+
+                                                    />
+                                                    {/* <Field
                                                         className={`${errors.services && touched.services && "border-red-700"} rounded-[5px] pr-10 px-3.5 py-2 text-gray-800 w-full border border-[#e5e7eb]`}
                                                         as="select"
                                                         name="services"
                                                         id="services"
                                                     >
+
                                                         <option label="Select service you would like to trade"></option>
 
                                                         <option value='Commodities Aggregation as a Service ' label='Commodities Aggregation as a Service ' >Commodities Aggregation as a Service </option>
@@ -320,7 +361,7 @@ const ComboTraderForm = (props) => {
                                                         </option>
 
 
-                                                    </Field>
+                                                    </Field> */}
                                                     <p className="text-red-700 text-sm mt-1">
                                                         <ErrorMessage name="services" />
                                                     </p>
@@ -360,26 +401,26 @@ export default ComboTraderForm
 
 const validation = Yup.object({
     name: Yup.string()
-        .required("required"),
+        .required("Required"),
     phone: Yup.string()
-        .required("required"),
+        .required("Required"),
     countries: Yup.string()
-        .required("required"),
+        .required("Required"),
     address: Yup.string()
-        .required("required"),
+        .required("Required"),
     commodities: Yup.string()
-        .required("required"),
+        .required("Required"),
     trading_range: Yup.string()
-        .required("required"),
+        .required("Required"),
     storage_duration: Yup.string()
-        .required("required"),
+        .required("Required"),
     quantity: Yup.string()
-        .required("required").min(1, 'Minimum of 1Tons'),
+        .required("Required").min(1, 'Minimum of 1Tons'),
     phone: Yup.string()
-        .required("required"),
-    services: Yup.string()
-        .required("required"),
+        .required("Required"),
+    services: Yup.array()
+        .min(1, "Pick at least one service").required(),
     email: Yup.string()
-        .required("email required")
+        .required("Email required")
         .email("Enter valid email"),
 })

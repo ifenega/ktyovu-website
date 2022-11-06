@@ -15,7 +15,7 @@ import farm2 from '../assets/farm2.png'
 import farm3 from '../assets/farm3.png'
 import farm4 from '../assets/farm4.png'
 import farm from '../assets/farm111.png'
-import farm5 from '../assets/farm5.png'
+import farm5 from '../assets/new/supported-img.png'
 import support1 from '../assets/support1.svg'
 import support2 from '../assets/support2.svg'
 import support3 from '../assets/support3.svg'
@@ -31,7 +31,7 @@ import { useNavigate } from 'react-router-dom'
 import { IoMdArrowDropleftCircle, IoMdArrowDroprightCircle } from 'react-icons/io'
 import ScrollToTop from '../Components/ScrollToTop'
 import landing1 from '../assets/new/landing1.png';
-import landing2 from '../assets/new/landing2.png';
+import landing2 from '../assets/new/combo-img.png';
 import landing3 from '../assets/new/landing3.png';
 import landing4 from '../assets/new/landing4.png';
 import landing5 from '../assets/new/landing5.png';
@@ -58,6 +58,7 @@ const Home = (props) => {
 
     return () => clearInterval(interval)
   })
+  
 
   return (
     <div>
@@ -165,7 +166,9 @@ const Home = (props) => {
             </section>
 
             <section className=' py-4 md:py-16 grid grid-cols-1 md:grid-cols-2 md:gap-10 items-center relative  2xl:rounded-[20px] px-4 md:px-8 lg:px-0 bg-[#FE8D3B1A] '>
+
               <div className='w-full pl-4 md:pl-8 lg:pl-24 pr-4 md:pr-0'>
+
                 <div className='text-[#F58A07] text-sm leading-3 py-2 px-3.5 bg-white rounded-3xl my-5 md:my-0 md:mb-20 w-fit border-[#F58A07] border relative md:absolute md:top-16 '>StorageX</div>
 
                 <h1 className='text-header max-w-[560px] font-semibold text-2xl md:text-3xl lg:text-5xl mt-12'>Avoid losses and cut costs on the storage of your agricultural products.</h1>
