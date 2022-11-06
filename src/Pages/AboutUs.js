@@ -79,16 +79,21 @@ const AboutUs = (props) => {
                             <h1 className='text-xl md:text-2xl lg:text-4xl mb-2'>Mission</h1>
                             <p className='text-base md:text-lg font-normal text-[#5B5B5B] mb-6'>
                                 Eradicating extreme poverty among African smallholder farmers by building and deploying climate-smart farming and post-harvest infrastructure.
-                                <br />
-                                <br />
+                            </p>
+                            <h1 className='text-xl md:text-2xl lg:text-4xl mb-2'>Why Kitovu?</h1>
+                            <p className='text-base md:text-lg font-normal text-[#5B5B5B] mb-6'>
                                 We are a bunch of passionate young people who looked at the most wicked problems that make it impossible for Africa to feed itself, and were crazy enough to think they could solve it.
                                 Smallholder farmers who typically grow 2–4-hectare farms realize low yields compared to global averages. Post-harvest, 40% of yields are lost due to poor storage, and lack of access to markets. This impacts farm-level productivity and farmer incomes.
+                                <br />
+                                <br />
                                 These problems arise because farmers rely on guesswork, instinct, and traditional knowledge to make operational decisions, thereby planting at the wrong time, using the wrong inputs i.e., seedlings, fertilizer, and herbicides, and applying these at the wrong time. Limited incomes which also lower purchasing power make it impossible for these farmers to afford high-quality inputs, or access effective storage solutions. And these are the problems that we solve.
+                                <br />
+                                <br />
                                 Kitovu Technology Company solves these problems by building climate-smart farm and post-harvest infrastructure that enables smallholder farmers in distant pocket locations to access personalized agronomic advisory, storage, and market access services. We provide African smallholder farmers with the data to make smart decisions about what to grow that would sell and how to grow them optimally, so as to enable them to make more money off their farms through yield improvement and reduced post-harvest losses.
                                 <br />
                                 <br />
-
                                 Kitovu Technology Company is helping to build a resilient food system for African Agriculture that enables smallholder to improve their productivity and incomes, taking on the audacious goal of providing the infrastructure African smallholder farmers would require to produce the 60% more food required to feed 9.7 billion people by 2050. We are transforming African agriculture, one smallholder farmer at a time.
+
 
                             </p>
                         </div>

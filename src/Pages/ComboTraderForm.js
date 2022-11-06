@@ -34,8 +34,8 @@ const ComboTraderForm = (props) => {
         try {
             const paystack = new PaystackPop()
             paystack.newTransaction({
-                key: 'pk_test_ddb82082e96a09b27bf5785bfb1d604e6f53e791',
-                amount: +values.quantity * 5500,
+                key: 'pk_live_4837d193bf86ef3a109356a5ab7520582cfa0837',
+                amount: +values.quantity * 5500.00 * 100,
                 email: values.email,
                 reference: reference,
                 currency: 'NGN',
@@ -159,7 +159,7 @@ const ComboTraderForm = (props) => {
 
 
                                     }}
-                                    validationSchema={validation}
+                                    // validationSchema={validation}
                                     onSubmit={onSubmit}
                                 >
                                     {({ values, isValid, errors, touched, setTouched, dirty, setFieldValue }) => (

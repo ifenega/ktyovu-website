@@ -64,7 +64,7 @@ const Navbar = () => {
                 <Link to="/" className="block py-2 pr-4 pl-3 text-[#394149] md:p-0 hover:underline   " aria-current="page">Home</Link>
               </li>
               <li>
-                <Link to="/about-us" className="block py-2 pr-4 pl-3 text-[#394149] md:p-0 hover:underline  hover:transition-shadow ">About us</Link>
+                <Link to="/about-us" className="block py-2 pr-4 pl-3 text-[#394149] md:p-0 hover:underline  hover:transition-shadow ">About Us</Link>
               </li>
               {/* <li>
                 <Link to="/combo-trader" className="block py-2 pr-4 pl-3 text-[#394149] md:p-0 hover:underline ">Why us</Link>
